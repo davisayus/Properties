@@ -1,0 +1,5 @@
+C:\Davis\Personal\Willow\Challenge\Properties\Property.Repository\obj\Debug\net5.0\Property.Repository.csproj.AssemblyReference.cache
+C:\Davis\Personal\Willow\Challenge\Properties\Property.Repository\obj\Debug\net5.0\Property.Repository.GeneratedMSBuildEditorConfig.editorconfig
+C:\Davis\Personal\Willow\Challenge\Properties\Property.Repository\obj\Debug\net5.0\Property.Repository.AssemblyInfoInputs.cache
+C:\Davis\Personal\Willow\Challenge\Properties\Property.Repository\obj\Debug\net5.0\Property.Repository.AssemblyInfo.cs
+C:\Davis\Personal\Willow\Challenge\Properties\Property.Repository\obj\Debug\net5.0\Property.Repository.csproj.CoreCompileInputs.cache

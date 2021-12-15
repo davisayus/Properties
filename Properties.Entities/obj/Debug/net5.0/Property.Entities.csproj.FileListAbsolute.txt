@@ -1,0 +1,12 @@
+C:\Davis\Personal\Willow\Challenge\Properties\Property.Entities\bin\Debug\net5.0\Property.Entities.deps.json
+C:\Davis\Personal\Willow\Challenge\Properties\Property.Entities\bin\Debug\net5.0\Property.Entities.dll
+C:\Davis\Personal\Willow\Challenge\Properties\Property.Entities\bin\Debug\net5.0\ref\Property.Entities.dll
+C:\Davis\Personal\Willow\Challenge\Properties\Property.Entities\bin\Debug\net5.0\Property.Entities.pdb
+C:\Davis\Personal\Willow\Challenge\Properties\Property.Entities\obj\Debug\net5.0\Property.Entities.csproj.AssemblyReference.cache
+C:\Davis\Personal\Willow\Challenge\Properties\Property.Entities\obj\Debug\net5.0\Property.Entities.GeneratedMSBuildEditorConfig.editorconfig
+C:\Davis\Personal\Willow\Challenge\Properties\Property.Entities\obj\Debug\net5.0\Property.Entities.AssemblyInfoInputs.cache
+C:\Davis\Personal\Willow\Challenge\Properties\Property.Entities\obj\Debug\net5.0\Property.Entities.AssemblyInfo.cs
+C:\Davis\Personal\Willow\Challenge\Properties\Property.Entities\obj\Debug\net5.0\Property.Entities.csproj.CoreCompileInputs.cache
+C:\Davis\Personal\Willow\Challenge\Properties\Property.Entities\obj\Debug\net5.0\Property.Entities.dll
+C:\Davis\Personal\Willow\Challenge\Properties\Property.Entities\obj\Debug\net5.0\ref\Property.Entities.dll
+C:\Davis\Personal\Willow\Challenge\Properties\Property.Entities\obj\Debug\net5.0\Property.Entities.pdb

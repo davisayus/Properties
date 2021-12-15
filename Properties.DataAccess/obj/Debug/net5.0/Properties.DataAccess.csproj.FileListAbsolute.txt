@@ -1,0 +1,15 @@
+C:\Davis\Personal\Willow\Challenge\Properties\Properties.DataAccess\bin\Debug\net5.0\Properties.DataAccess.deps.json
+C:\Davis\Personal\Willow\Challenge\Properties\Properties.DataAccess\bin\Debug\net5.0\Properties.DataAccess.dll
+C:\Davis\Personal\Willow\Challenge\Properties\Properties.DataAccess\bin\Debug\net5.0\ref\Properties.DataAccess.dll
+C:\Davis\Personal\Willow\Challenge\Properties\Properties.DataAccess\bin\Debug\net5.0\Properties.DataAccess.pdb
+C:\Davis\Personal\Willow\Challenge\Properties\Properties.DataAccess\bin\Debug\net5.0\Properties.Entities.dll
+C:\Davis\Personal\Willow\Challenge\Properties\Properties.DataAccess\bin\Debug\net5.0\Properties.Entities.pdb
+C:\Davis\Personal\Willow\Challenge\Properties\Properties.DataAccess\obj\Debug\net5.0\Properties.DataAccess.csproj.AssemblyReference.cache
+C:\Davis\Personal\Willow\Challenge\Properties\Properties.DataAccess\obj\Debug\net5.0\Properties.DataAccess.GeneratedMSBuildEditorConfig.editorconfig
+C:\Davis\Personal\Willow\Challenge\Properties\Properties.DataAccess\obj\Debug\net5.0\Properties.DataAccess.AssemblyInfoInputs.cache
+C:\Davis\Personal\Willow\Challenge\Properties\Properties.DataAccess\obj\Debug\net5.0\Properties.DataAccess.AssemblyInfo.cs
+C:\Davis\Personal\Willow\Challenge\Properties\Properties.DataAccess\obj\Debug\net5.0\Properties.DataAccess.csproj.CoreCompileInputs.cache
+C:\Davis\Personal\Willow\Challenge\Properties\Properties.DataAccess\obj\Debug\net5.0\Properties.DataAccess.csproj.CopyComplete
+C:\Davis\Personal\Willow\Challenge\Properties\Properties.DataAccess\obj\Debug\net5.0\Properties.DataAccess.dll
+C:\Davis\Personal\Willow\Challenge\Properties\Properties.DataAccess\obj\Debug\net5.0\ref\Properties.DataAccess.dll
+C:\Davis\Personal\Willow\Challenge\Properties\Properties.DataAccess\obj\Debug\net5.0\Properties.DataAccess.pdb

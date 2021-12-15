@@ -1,0 +1,15 @@
+C:\Davis\Personal\Willow\Challenge\Properties\Properties.Contracts\bin\Debug\net5.0\Properties.Contracts.deps.json
+C:\Davis\Personal\Willow\Challenge\Properties\Properties.Contracts\bin\Debug\net5.0\Properties.Contracts.dll
+C:\Davis\Personal\Willow\Challenge\Properties\Properties.Contracts\bin\Debug\net5.0\ref\Properties.Contracts.dll
+C:\Davis\Personal\Willow\Challenge\Properties\Properties.Contracts\bin\Debug\net5.0\Properties.Contracts.pdb
+C:\Davis\Personal\Willow\Challenge\Properties\Properties.Contracts\bin\Debug\net5.0\Properties.Entities.dll
+C:\Davis\Personal\Willow\Challenge\Properties\Properties.Contracts\bin\Debug\net5.0\Properties.Entities.pdb
+C:\Davis\Personal\Willow\Challenge\Properties\Properties.Contracts\obj\Debug\net5.0\Properties.Contracts.csproj.AssemblyReference.cache
+C:\Davis\Personal\Willow\Challenge\Properties\Properties.Contracts\obj\Debug\net5.0\Properties.Contracts.GeneratedMSBuildEditorConfig.editorconfig
+C:\Davis\Personal\Willow\Challenge\Properties\Properties.Contracts\obj\Debug\net5.0\Properties.Contracts.AssemblyInfoInputs.cache
+C:\Davis\Personal\Willow\Challenge\Properties\Properties.Contracts\obj\Debug\net5.0\Properties.Contracts.AssemblyInfo.cs
+C:\Davis\Personal\Willow\Challenge\Properties\Properties.Contracts\obj\Debug\net5.0\Properties.Contracts.csproj.CoreCompileInputs.cache
+C:\Davis\Personal\Willow\Challenge\Properties\Properties.Contracts\obj\Debug\net5.0\Properties.Contracts.csproj.CopyComplete
+C:\Davis\Personal\Willow\Challenge\Properties\Properties.Contracts\obj\Debug\net5.0\Properties.Contracts.dll
+C:\Davis\Personal\Willow\Challenge\Properties\Properties.Contracts\obj\Debug\net5.0\ref\Properties.Contracts.dll
+C:\Davis\Personal\Willow\Challenge\Properties\Properties.Contracts\obj\Debug\net5.0\Properties.Contracts.pdb

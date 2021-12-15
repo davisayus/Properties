@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "unUwWibM4zWWtfvOc3R9kUo75bYoZ6pDKNQm9EqjGivO32Cy3MOp2kRQ/RAy3ge0CsOAjr8NPsHjj1qhOt5Ztw==",
+  "success": true,
+  "projectFilePath": "C:\\Davis\\Personal\\Willow\\Challenge\\Properties\\Properties.Contracts\\Properties.Contracts.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Davis Ayus\\.nuget\\packages\\microsoft.aspnetcore.http.features\\5.0.12\\microsoft.aspnetcore.http.features.5.0.12.nupkg.sha512",
+    "C:\\Users\\Davis Ayus\\.nuget\\packages\\microsoft.extensions.primitives\\5.0.1\\microsoft.extensions.primitives.5.0.1.nupkg.sha512",
+    "C:\\Users\\Davis Ayus\\.nuget\\packages\\system.io.pipelines\\5.0.1\\system.io.pipelines.5.0.1.nupkg.sha512"
+  ],
+  "logs": []
+}

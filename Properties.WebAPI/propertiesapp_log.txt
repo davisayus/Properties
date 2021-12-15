@@ -1,0 +1,1062 @@
+2021-11-14 22:07:36.008 -05:00 [INF] User profile is available. Using 'C:\Users\Davis Ayus\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2021-11-14 22:07:36.465 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-11-14 22:07:36.465 -05:00 [INF] Hosting environment: Development
+2021-11-14 22:07:36.465 -05:00 [INF] Content root path: C:\Davis\Personal\Willow\Challenge\Properties\Property.WebAPI
+2021-11-14 22:07:36.536 -05:00 [INF] Request starting HTTP/2 GET https://localhost:44328/swagger/index.html - -
+2021-11-14 22:07:36.699 -05:00 [INF] Request finished HTTP/2 GET https://localhost:44328/swagger/index.html - - - 200 - text/html;charset=utf-8 166.6555ms
+2021-11-14 22:07:36.885 -05:00 [INF] Request starting HTTP/2 GET https://localhost:44328/swagger/v1/swagger.json - -
+2021-11-14 22:07:36.999 -05:00 [INF] Request starting HTTP/1.1 GET https://localhost:44328/swagger/swagger-ui-bundle.js.map - -
+2021-11-14 22:07:37.000 -05:00 [INF] Request starting HTTP/1.1 GET https://localhost:44328/swagger/swagger-ui-standalone-preset.js.map - -
+2021-11-14 22:07:37.071 -05:00 [INF] Request finished HTTP/1.1 GET https://localhost:44328/swagger/swagger-ui-bundle.js.map - - - 404 - - 72.3565ms
+2021-11-14 22:07:37.072 -05:00 [INF] Request finished HTTP/1.1 GET https://localhost:44328/swagger/swagger-ui-standalone-preset.js.map - - - 404 - - 72.0946ms
+2021-11-14 22:07:37.106 -05:00 [INF] Request finished HTTP/2 GET https://localhost:44328/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 220.1291ms
+2021-11-14 22:07:53.470 -05:00 [INF] Request starting HTTP/2 GET https://localhost:44328/api/Owner - -
+2021-11-14 22:07:53.505 -05:00 [INF] Executing endpoint 'Property.WebAPI.Controllers.v1.OwnerController.Get (Property.WebAPI)'
+2021-11-14 22:07:53.616 -05:00 [INF] Route matched with {action = "Get", controller = "Owner"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[Properties.Entities.Entities.Owner]]] Get() on controller Property.WebAPI.Controllers.v1.OwnerController (Property.WebAPI).
+2021-11-14 22:07:55.458 -05:00 [INF] Executing ObjectResult, writing value of type 'Properties.Entities.Models.ResponseService`1[[System.Collections.Generic.List`1[[Properties.Entities.Entities.Owner, Properties.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2021-11-14 22:07:55.512 -05:00 [INF] Executed action Property.WebAPI.Controllers.v1.OwnerController.Get (Property.WebAPI) in 1889.749ms
+2021-11-14 22:07:55.515 -05:00 [INF] Executed endpoint 'Property.WebAPI.Controllers.v1.OwnerController.Get (Property.WebAPI)'
+2021-11-14 22:07:55.516 -05:00 [INF] Request finished HTTP/2 GET https://localhost:44328/api/Owner - - - 200 - application/json;+charset=utf-8 2045.5190ms
+2021-11-14 22:08:28.371 -05:00 [INF] Request starting HTTP/2 PUT https://localhost:44328/api/Owner application/json 152
+2021-11-14 22:08:28.375 -05:00 [INF] CORS policy execution failed.
+2021-11-14 22:08:28.375 -05:00 [INF] Request origin https://localhost:44328 does not have permission to access the resource.
+2021-11-14 22:08:28.377 -05:00 [INF] Executing endpoint 'Property.WebAPI.Controllers.v1.OwnerController.Put (Property.WebAPI)'
+2021-11-14 22:08:28.415 -05:00 [INF] Route matched with {action = "Put", controller = "Owner"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Properties.Entities.Entities.Owner]] Put(Properties.Entities.Entities.Owner) on controller Property.WebAPI.Controllers.v1.OwnerController (Property.WebAPI).
+2021-11-14 22:08:29.088 -05:00 [ERR] Service: UpdateOwnerAsync, Message: An error occurred while updating the entries. See the inner exception for details. Inner Exception: String or binary data would be truncated in table 'PropertiesDb.dbo.Owners', column 'State'. Truncated value: 'st'.
+The statement has been terminated. 
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while updating the entries. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): String or binary data would be truncated in table 'PropertiesDb.dbo.Owners', column 'State'. Truncated value: 'st'.
+The statement has been terminated.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__169_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.Tasks.Task.<>c.<.cctor>b__277_0(Object obj)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+ClientConnectionId:42438342-bc67-477b-ad9a-cf3fd2d3399a
+Error Number:2628,State:1,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(DbContext _, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Properties.Repository.Repository.OwnerRepository.UpdateAsync(Owner entity) in C:\Davis\Personal\Willow\Challenge\Properties\Property.Repository\Repository\OwnerRepository.cs:line 82
+   at Properties.Core.Core.V1.OwnerCore.UpdateAsync(Owner entity) in C:\Davis\Personal\Willow\Challenge\Properties\Property.Core\Core\V1\OwnerCore.cs:line 43
+2021-11-14 22:08:29.290 -05:00 [INF] Executing ObjectResult, writing value of type 'Properties.Entities.Models.ResponseService`1[[Properties.Entities.Entities.Owner, Properties.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2021-11-14 22:08:29.300 -05:00 [INF] Executed action Property.WebAPI.Controllers.v1.OwnerController.Put (Property.WebAPI) in 882.8748ms
+2021-11-14 22:08:29.303 -05:00 [INF] Executed endpoint 'Property.WebAPI.Controllers.v1.OwnerController.Put (Property.WebAPI)'
+2021-11-14 22:08:29.304 -05:00 [INF] Request finished HTTP/2 PUT https://localhost:44328/api/Owner application/json 152 - 500 - application/json;+charset=utf-8 932.5326ms
+2021-11-14 22:13:34.283 -05:00 [INF] User profile is available. Using 'C:\Users\Davis Ayus\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2021-11-14 22:13:34.797 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-11-14 22:13:34.799 -05:00 [INF] Hosting environment: Development
+2021-11-14 22:13:34.799 -05:00 [INF] Content root path: C:\Davis\Personal\Willow\Challenge\Properties\Property.WebAPI
+2021-11-14 22:13:34.870 -05:00 [INF] Request starting HTTP/2 GET https://localhost:44328/swagger/index.html - -
+2021-11-14 22:13:35.047 -05:00 [INF] Request finished HTTP/2 GET https://localhost:44328/swagger/index.html - - - 200 - text/html;charset=utf-8 179.4943ms
+2021-11-14 22:13:35.314 -05:00 [INF] Request starting HTTP/2 GET https://localhost:44328/swagger/v1/swagger.json - -
+2021-11-14 22:13:35.411 -05:00 [INF] Request starting HTTP/1.1 GET https://localhost:44328/swagger/swagger-ui-bundle.js.map - -
+2021-11-14 22:13:35.412 -05:00 [INF] Request starting HTTP/1.1 GET https://localhost:44328/swagger/swagger-ui-standalone-preset.js.map - -
+2021-11-14 22:13:35.491 -05:00 [INF] Request finished HTTP/1.1 GET https://localhost:44328/swagger/swagger-ui-standalone-preset.js.map - - - 404 - - 76.9131ms
+2021-11-14 22:13:35.515 -05:00 [INF] Request finished HTTP/1.1 GET https://localhost:44328/swagger/swagger-ui-bundle.js.map - - - 404 - - 103.5429ms
+2021-11-14 22:13:35.525 -05:00 [INF] Request finished HTTP/2 GET https://localhost:44328/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 211.5167ms
+2021-11-14 22:16:49.106 -05:00 [INF] Request starting HTTP/2 PUT https://localhost:44328/api/Owner application/json 152
+2021-11-14 22:16:49.110 -05:00 [INF] CORS policy execution failed.
+2021-11-14 22:16:49.110 -05:00 [INF] Request origin https://localhost:44328 does not have permission to access the resource.
+2021-11-14 22:16:49.118 -05:00 [INF] Executing endpoint 'Property.WebAPI.Controllers.v1.OwnerController.Put (Property.WebAPI)'
+2021-11-14 22:16:49.160 -05:00 [INF] Route matched with {action = "Put", controller = "Owner"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Properties.Entities.Entities.Owner]] Put(Properties.Entities.Entities.Owner) on controller Property.WebAPI.Controllers.v1.OwnerController (Property.WebAPI).
+2021-11-14 22:16:51.417 -05:00 [ERR] Service: UpdateOwnerAsync, Message: An error occurred while updating the entries. See the inner exception for details. Inner Exception: String or binary data would be truncated in table 'PropertiesDb.dbo.Owners', column 'State'. Truncated value: 'st'.
+The statement has been terminated. 
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while updating the entries. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): String or binary data would be truncated in table 'PropertiesDb.dbo.Owners', column 'State'. Truncated value: 'st'.
+The statement has been terminated.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__169_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.Tasks.Task.<>c.<.cctor>b__277_0(Object obj)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+ClientConnectionId:66d3c502-5e62-49b3-a9f8-5e86a9fb20df
+Error Number:2628,State:1,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(DbContext _, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Properties.Repository.Repository.OwnerRepository.UpdateAsync(Owner entity) in C:\Davis\Personal\Willow\Challenge\Properties\Property.Repository\Repository\OwnerRepository.cs:line 82
+   at Properties.Core.Core.V1.OwnerCore.UpdateAsync(Owner entity) in C:\Davis\Personal\Willow\Challenge\Properties\Property.Core\Core\V1\OwnerCore.cs:line 43
+2021-11-14 22:16:51.499 -05:00 [INF] Executing ObjectResult, writing value of type 'Properties.Entities.Models.ResponseService`1[[Properties.Entities.Entities.Owner, Properties.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2021-11-14 22:16:51.530 -05:00 [INF] Executed action Property.WebAPI.Controllers.v1.OwnerController.Put (Property.WebAPI) in 2364.987ms
+2021-11-14 22:16:51.548 -05:00 [INF] Executed endpoint 'Property.WebAPI.Controllers.v1.OwnerController.Put (Property.WebAPI)'
+2021-11-14 22:16:51.550 -05:00 [INF] Request finished HTTP/2 PUT https://localhost:44328/api/Owner application/json 152 - 500 - application/json;+charset=utf-8 2443.6482ms
+2021-11-14 22:23:24.433 -05:00 [INF] User profile is available. Using 'C:\Users\Davis Ayus\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2021-11-14 22:23:25.005 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-11-14 22:23:25.009 -05:00 [INF] Hosting environment: Development
+2021-11-14 22:23:25.010 -05:00 [INF] Content root path: C:\Davis\Personal\Willow\Challenge\Properties\Property.WebAPI
+2021-11-14 22:23:25.060 -05:00 [INF] Request starting HTTP/2 GET https://localhost:44328/swagger/index.html - -
+2021-11-14 22:23:25.181 -05:00 [INF] Request finished HTTP/2 GET https://localhost:44328/swagger/index.html - - - 200 - text/html;charset=utf-8 122.3530ms
+2021-11-14 22:23:25.391 -05:00 [INF] Request starting HTTP/2 GET https://localhost:44328/swagger/v1/swagger.json - -
+2021-11-14 22:23:25.530 -05:00 [INF] Request starting HTTP/1.1 GET https://localhost:44328/swagger/swagger-ui-bundle.js.map - -
+2021-11-14 22:23:25.531 -05:00 [INF] Request starting HTTP/1.1 GET https://localhost:44328/swagger/swagger-ui-standalone-preset.js.map - -
+2021-11-14 22:23:25.586 -05:00 [INF] Request finished HTTP/1.1 GET https://localhost:44328/swagger/swagger-ui-standalone-preset.js.map - - - 404 - - 54.2805ms
+2021-11-14 22:23:25.586 -05:00 [INF] Request finished HTTP/1.1 GET https://localhost:44328/swagger/swagger-ui-bundle.js.map - - - 404 - - 55.6138ms
+2021-11-14 22:23:25.616 -05:00 [INF] Request finished HTTP/2 GET https://localhost:44328/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 224.9294ms
+2021-11-14 22:25:15.137 -05:00 [INF] Request starting HTTP/2 GET https://localhost:44328/api/Owner/davis - -
+2021-11-14 22:25:15.203 -05:00 [ERR] An unhandled exception has occurred while executing the request.
+Microsoft.AspNetCore.Routing.Matching.AmbiguousMatchException: The request matched multiple endpoints. Matches: 
+
+Property.WebAPI.Controllers.v1.OwnerController.Get (Property.WebAPI)
+Property.WebAPI.Controllers.v1.OwnerController.Get (Property.WebAPI)
+   at Microsoft.AspNetCore.Routing.Matching.DefaultEndpointSelector.ReportAmbiguity(CandidateState[] candidateState)
+   at Microsoft.AspNetCore.Routing.Matching.DefaultEndpointSelector.ProcessFinalCandidates(HttpContext httpContext, CandidateState[] candidateState)
+   at Microsoft.AspNetCore.Routing.Matching.DefaultEndpointSelector.Select(HttpContext httpContext, CandidateState[] candidateState)
+   at Microsoft.AspNetCore.Routing.Matching.DefaultEndpointSelector.SelectAsync(HttpContext httpContext, CandidateSet candidateSet)
+   at Microsoft.AspNetCore.Routing.Matching.DfaMatcher.SelectEndpointWithPoliciesAsync(HttpContext httpContext, IEndpointSelectorPolicy[] policies, CandidateSet candidateSet)
+   at Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware.<Invoke>g__AwaitMatch|8_1(EndpointRoutingMiddleware middleware, HttpContext httpContext, Task matchTask)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2021-11-14 22:25:15.315 -05:00 [INF] Request finished HTTP/2 GET https://localhost:44328/api/Owner/davis - - - 500 - text/plain 179.1398ms
+2021-11-14 22:25:46.404 -05:00 [INF] Request starting HTTP/2 GET https://localhost:44328/api/Owner/davis - -
+2021-11-14 22:25:46.424 -05:00 [ERR] An unhandled exception has occurred while executing the request.
+Microsoft.AspNetCore.Routing.Matching.AmbiguousMatchException: The request matched multiple endpoints. Matches: 
+
+Property.WebAPI.Controllers.v1.OwnerController.Get (Property.WebAPI)
+Property.WebAPI.Controllers.v1.OwnerController.Get (Property.WebAPI)
+   at Microsoft.AspNetCore.Routing.Matching.DefaultEndpointSelector.ReportAmbiguity(CandidateState[] candidateState)
+   at Microsoft.AspNetCore.Routing.Matching.DefaultEndpointSelector.ProcessFinalCandidates(HttpContext httpContext, CandidateState[] candidateState)
+   at Microsoft.AspNetCore.Routing.Matching.DefaultEndpointSelector.Select(HttpContext httpContext, CandidateState[] candidateState)
+   at Microsoft.AspNetCore.Routing.Matching.DefaultEndpointSelector.SelectAsync(HttpContext httpContext, CandidateSet candidateSet)
+   at Microsoft.AspNetCore.Routing.Matching.DfaMatcher.SelectEndpointWithPoliciesAsync(HttpContext httpContext, IEndpointSelectorPolicy[] policies, CandidateSet candidateSet)
+   at Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware.<Invoke>g__AwaitMatch|8_1(EndpointRoutingMiddleware middleware, HttpContext httpContext, Task matchTask)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2021-11-14 22:25:46.431 -05:00 [INF] Request finished HTTP/2 GET https://localhost:44328/api/Owner/davis - - - 500 - text/plain 26.3656ms
+2021-11-14 22:25:49.147 -05:00 [INF] Request starting HTTP/2 GET https://localhost:44328/api/Owner/davis - -
+2021-11-14 22:25:49.157 -05:00 [ERR] An unhandled exception has occurred while executing the request.
+Microsoft.AspNetCore.Routing.Matching.AmbiguousMatchException: The request matched multiple endpoints. Matches: 
+
+Property.WebAPI.Controllers.v1.OwnerController.Get (Property.WebAPI)
+Property.WebAPI.Controllers.v1.OwnerController.Get (Property.WebAPI)
+   at Microsoft.AspNetCore.Routing.Matching.DefaultEndpointSelector.ReportAmbiguity(CandidateState[] candidateState)
+   at Microsoft.AspNetCore.Routing.Matching.DefaultEndpointSelector.ProcessFinalCandidates(HttpContext httpContext, CandidateState[] candidateState)
+   at Microsoft.AspNetCore.Routing.Matching.DefaultEndpointSelector.Select(HttpContext httpContext, CandidateState[] candidateState)
+   at Microsoft.AspNetCore.Routing.Matching.DefaultEndpointSelector.SelectAsync(HttpContext httpContext, CandidateSet candidateSet)
+   at Microsoft.AspNetCore.Routing.Matching.DfaMatcher.SelectEndpointWithPoliciesAsync(HttpContext httpContext, IEndpointSelectorPolicy[] policies, CandidateSet candidateSet)
+   at Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware.<Invoke>g__AwaitMatch|8_1(EndpointRoutingMiddleware middleware, HttpContext httpContext, Task matchTask)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2021-11-14 22:25:49.166 -05:00 [INF] Request finished HTTP/2 GET https://localhost:44328/api/Owner/davis - - - 500 - text/plain 18.7371ms
+2021-11-14 22:26:29.751 -05:00 [INF] Request starting HTTP/2 GET https://localhost:44328/api/Owner/davis - -
+2021-11-14 22:26:29.757 -05:00 [ERR] An unhandled exception has occurred while executing the request.
+Microsoft.AspNetCore.Routing.Matching.AmbiguousMatchException: The request matched multiple endpoints. Matches: 
+
+Property.WebAPI.Controllers.v1.OwnerController.Get (Property.WebAPI)
+Property.WebAPI.Controllers.v1.OwnerController.Get (Property.WebAPI)
+   at Microsoft.AspNetCore.Routing.Matching.DefaultEndpointSelector.ReportAmbiguity(CandidateState[] candidateState)
+   at Microsoft.AspNetCore.Routing.Matching.DefaultEndpointSelector.ProcessFinalCandidates(HttpContext httpContext, CandidateState[] candidateState)
+   at Microsoft.AspNetCore.Routing.Matching.DefaultEndpointSelector.Select(HttpContext httpContext, CandidateState[] candidateState)
+   at Microsoft.AspNetCore.Routing.Matching.DefaultEndpointSelector.SelectAsync(HttpContext httpContext, CandidateSet candidateSet)
+   at Microsoft.AspNetCore.Routing.Matching.DfaMatcher.SelectEndpointWithPoliciesAsync(HttpContext httpContext, IEndpointSelectorPolicy[] policies, CandidateSet candidateSet)
+   at Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware.<Invoke>g__AwaitMatch|8_1(EndpointRoutingMiddleware middleware, HttpContext httpContext, Task matchTask)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2021-11-14 22:26:29.759 -05:00 [INF] Request finished HTTP/2 GET https://localhost:44328/api/Owner/davis - - - 500 - text/plain 7.9610ms
+2021-11-14 22:26:44.248 -05:00 [INF] Request starting HTTP/2 GET https://localhost:44328/api/Owner/2 - -
+2021-11-14 22:26:44.251 -05:00 [ERR] An unhandled exception has occurred while executing the request.
+Microsoft.AspNetCore.Routing.Matching.AmbiguousMatchException: The request matched multiple endpoints. Matches: 
+
+Property.WebAPI.Controllers.v1.OwnerController.Get (Property.WebAPI)
+Property.WebAPI.Controllers.v1.OwnerController.Get (Property.WebAPI)
+   at Microsoft.AspNetCore.Routing.Matching.DefaultEndpointSelector.ReportAmbiguity(CandidateState[] candidateState)
+   at Microsoft.AspNetCore.Routing.Matching.DefaultEndpointSelector.ProcessFinalCandidates(HttpContext httpContext, CandidateState[] candidateState)
+   at Microsoft.AspNetCore.Routing.Matching.DefaultEndpointSelector.Select(HttpContext httpContext, CandidateState[] candidateState)
+   at Microsoft.AspNetCore.Routing.Matching.DefaultEndpointSelector.SelectAsync(HttpContext httpContext, CandidateSet candidateSet)
+   at Microsoft.AspNetCore.Routing.Matching.DfaMatcher.SelectEndpointWithPoliciesAsync(HttpContext httpContext, IEndpointSelectorPolicy[] policies, CandidateSet candidateSet)
+   at Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware.<Invoke>g__AwaitMatch|8_1(EndpointRoutingMiddleware middleware, HttpContext httpContext, Task matchTask)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2021-11-14 22:26:44.255 -05:00 [INF] Request finished HTTP/2 GET https://localhost:44328/api/Owner/2 - - - 500 - text/plain 7.8634ms
+2021-11-14 22:27:46.148 -05:00 [INF] User profile is available. Using 'C:\Users\Davis Ayus\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2021-11-14 22:27:46.518 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-11-14 22:27:46.518 -05:00 [INF] Hosting environment: Development
+2021-11-14 22:27:46.519 -05:00 [INF] Content root path: C:\Davis\Personal\Willow\Challenge\Properties\Property.WebAPI
+2021-11-14 22:27:46.575 -05:00 [INF] Request starting HTTP/2 GET https://localhost:44328/swagger/index.html - -
+2021-11-14 22:27:46.770 -05:00 [INF] Request finished HTTP/2 GET https://localhost:44328/swagger/index.html - - - 200 - text/html;charset=utf-8 196.5228ms
+2021-11-14 22:27:47.148 -05:00 [INF] Request starting HTTP/1.1 GET https://localhost:44328/swagger/swagger-ui-bundle.js.map - -
+2021-11-14 22:27:47.226 -05:00 [INF] Request finished HTTP/1.1 GET https://localhost:44328/swagger/swagger-ui-bundle.js.map - - - 404 - - 77.8703ms
+2021-11-14 22:27:47.320 -05:00 [INF] Request starting HTTP/1.1 GET https://localhost:44328/swagger/swagger-ui-standalone-preset.js.map - -
+2021-11-14 22:27:47.323 -05:00 [INF] Request finished HTTP/1.1 GET https://localhost:44328/swagger/swagger-ui-standalone-preset.js.map - - - 404 - - 2.4119ms
+2021-11-14 22:27:47.408 -05:00 [INF] Request starting HTTP/2 GET https://localhost:44328/swagger/v1/swagger.json - -
+2021-11-14 22:27:47.541 -05:00 [INF] Request finished HTTP/2 GET https://localhost:44328/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 133.2192ms
+2021-11-14 22:27:55.984 -05:00 [INF] Request starting HTTP/2 GET https://localhost:44328/api/Owner/davis - -
+2021-11-14 22:27:56.016 -05:00 [ERR] An unhandled exception has occurred while executing the request.
+Microsoft.AspNetCore.Routing.Matching.AmbiguousMatchException: The request matched multiple endpoints. Matches: 
+
+Property.WebAPI.Controllers.v1.OwnerController.GetById (Property.WebAPI)
+Property.WebAPI.Controllers.v1.OwnerController.GetByName (Property.WebAPI)
+   at Microsoft.AspNetCore.Routing.Matching.DefaultEndpointSelector.ReportAmbiguity(CandidateState[] candidateState)
+   at Microsoft.AspNetCore.Routing.Matching.DefaultEndpointSelector.ProcessFinalCandidates(HttpContext httpContext, CandidateState[] candidateState)
+   at Microsoft.AspNetCore.Routing.Matching.DefaultEndpointSelector.Select(HttpContext httpContext, CandidateState[] candidateState)
+   at Microsoft.AspNetCore.Routing.Matching.DefaultEndpointSelector.SelectAsync(HttpContext httpContext, CandidateSet candidateSet)
+   at Microsoft.AspNetCore.Routing.Matching.DfaMatcher.SelectEndpointWithPoliciesAsync(HttpContext httpContext, IEndpointSelectorPolicy[] policies, CandidateSet candidateSet)
+   at Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware.<Invoke>g__AwaitMatch|8_1(EndpointRoutingMiddleware middleware, HttpContext httpContext, Task matchTask)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2021-11-14 22:27:56.122 -05:00 [INF] Request finished HTTP/2 GET https://localhost:44328/api/Owner/davis - - - 500 - text/plain 138.3459ms
+2021-11-14 22:29:00.555 -05:00 [INF] User profile is available. Using 'C:\Users\Davis Ayus\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2021-11-14 22:29:01.306 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-11-14 22:29:01.324 -05:00 [INF] Hosting environment: Development
+2021-11-14 22:29:01.324 -05:00 [INF] Content root path: C:\Davis\Personal\Willow\Challenge\Properties\Property.WebAPI
+2021-11-14 22:29:01.398 -05:00 [INF] Request starting HTTP/2 GET https://localhost:44328/swagger/index.html - -
+2021-11-14 22:29:01.676 -05:00 [INF] Request finished HTTP/2 GET https://localhost:44328/swagger/index.html - - - 200 - text/html;charset=utf-8 278.7734ms
+2021-11-14 22:29:02.038 -05:00 [INF] Request starting HTTP/1.1 GET https://localhost:44328/swagger/swagger-ui-bundle.js.map - -
+2021-11-14 22:29:02.119 -05:00 [INF] Request finished HTTP/1.1 GET https://localhost:44328/swagger/swagger-ui-bundle.js.map - - - 404 - - 81.1098ms
+2021-11-14 22:29:02.240 -05:00 [INF] Request starting HTTP/1.1 GET https://localhost:44328/swagger/swagger-ui-standalone-preset.js.map - -
+2021-11-14 22:29:02.243 -05:00 [INF] Request finished HTTP/1.1 GET https://localhost:44328/swagger/swagger-ui-standalone-preset.js.map - - - 404 - - 3.1472ms
+2021-11-14 22:29:02.331 -05:00 [INF] Request starting HTTP/2 GET https://localhost:44328/swagger/v1/swagger.json - -
+2021-11-14 22:29:02.566 -05:00 [INF] Request finished HTTP/2 GET https://localhost:44328/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 234.0081ms
+2021-11-14 22:29:33.132 -05:00 [INF] Request starting HTTP/2 GET https://localhost:44328/api/Owner/name/davis - -
+2021-11-14 22:29:33.169 -05:00 [INF] Executing endpoint 'Property.WebAPI.Controllers.v1.OwnerController.GetByName (Property.WebAPI)'
+2021-11-14 22:29:33.306 -05:00 [INF] Route matched with {action = "GetByName", controller = "Owner"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.List`1[Properties.Entities.Entities.Owner]]] GetByName(System.String) on controller Property.WebAPI.Controllers.v1.OwnerController (Property.WebAPI).
+2021-11-14 22:30:32.196 -05:00 [INF] Executing ObjectResult, writing value of type 'Properties.Entities.Models.ResponseService`1[[System.Collections.Generic.List`1[[Properties.Entities.Entities.Owner, Properties.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2021-11-14 22:30:32.267 -05:00 [INF] Executed action Property.WebAPI.Controllers.v1.OwnerController.GetByName (Property.WebAPI) in 58948.6007ms
+2021-11-14 22:30:32.272 -05:00 [INF] Executed endpoint 'Property.WebAPI.Controllers.v1.OwnerController.GetByName (Property.WebAPI)'
+2021-11-14 22:30:32.275 -05:00 [INF] Request finished HTTP/2 GET https://localhost:44328/api/Owner/name/davis - - - 200 - application/json;+charset=utf-8 59143.1765ms
+2021-11-16 07:19:15.870 -05:00 [INF] User profile is available. Using 'C:\Users\Davis Ayus\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2021-11-16 07:19:16.686 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-11-16 07:19:16.686 -05:00 [INF] Hosting environment: Development
+2021-11-16 07:19:16.686 -05:00 [INF] Content root path: C:\Davis\Personal\Willow\Challenge\Properties\Property.WebAPI
+2021-11-16 07:19:16.760 -05:00 [INF] Request starting HTTP/2 GET https://localhost:44328/swagger/index.html - -
+2021-11-16 07:19:16.973 -05:00 [INF] Request finished HTTP/2 GET https://localhost:44328/swagger/index.html - - - 200 - text/html;charset=utf-8 219.1042ms
+2021-11-16 07:19:17.357 -05:00 [INF] Request starting HTTP/1.1 GET https://localhost:44328/swagger/swagger-ui-bundle.js.map - -
+2021-11-16 07:19:17.416 -05:00 [INF] Request finished HTTP/1.1 GET https://localhost:44328/swagger/swagger-ui-bundle.js.map - - - 404 - - 58.6590ms
+2021-11-16 07:19:17.587 -05:00 [INF] Request starting HTTP/1.1 GET https://localhost:44328/swagger/swagger-ui-standalone-preset.js.map - -
+2021-11-16 07:19:17.593 -05:00 [INF] Request finished HTTP/1.1 GET https://localhost:44328/swagger/swagger-ui-standalone-preset.js.map - - - 404 - - 5.9777ms
+2021-11-16 07:19:17.713 -05:00 [INF] Request starting HTTP/2 GET https://localhost:44328/swagger/v1/swagger.json - -
+2021-11-16 07:19:17.849 -05:00 [INF] Request finished HTTP/2 GET https://localhost:44328/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 135.5877ms
+2021-11-16 07:21:28.485 -05:00 [INF] Request starting HTTP/2 GET https://localhost:44328/api/Property - -
+2021-11-16 07:21:28.510 -05:00 [INF] Executing endpoint 'Properties.WebAPI.Controllers.v1.PropertyController.Get (Property.WebAPI)'
+2021-11-16 07:21:28.627 -05:00 [INF] Route matched with {action = "Get", controller = "Property"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[Properties.Entities.Entities.Property]]] Get() on controller Properties.WebAPI.Controllers.v1.PropertyController (Property.WebAPI).
+2021-11-16 07:21:31.659 -05:00 [INF] Executing ObjectResult, writing value of type 'Properties.Entities.Models.ResponseService`1[[System.Collections.Generic.List`1[[Properties.Entities.Entities.Property, Properties.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2021-11-16 07:21:31.701 -05:00 [INF] Executed action Properties.WebAPI.Controllers.v1.PropertyController.Get (Property.WebAPI) in 3067.6358ms
+2021-11-16 07:21:31.704 -05:00 [INF] Executed endpoint 'Properties.WebAPI.Controllers.v1.PropertyController.Get (Property.WebAPI)'
+2021-11-16 07:21:31.706 -05:00 [INF] Request finished HTTP/2 GET https://localhost:44328/api/Property - - - 200 - application/json;+charset=utf-8 3221.0268ms
+2021-11-16 07:24:06.643 -05:00 [INF] User profile is available. Using 'C:\Users\Davis Ayus\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2021-11-16 07:24:07.167 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-11-16 07:24:07.168 -05:00 [INF] Hosting environment: Development
+2021-11-16 07:24:07.168 -05:00 [INF] Content root path: C:\Davis\Personal\Willow\Challenge\Properties\Property.WebAPI
+2021-11-16 07:24:07.222 -05:00 [INF] Request starting HTTP/2 GET https://localhost:44328/swagger/index.html - -
+2021-11-16 07:24:07.406 -05:00 [INF] Request finished HTTP/2 GET https://localhost:44328/swagger/index.html - - - 200 - text/html;charset=utf-8 184.0044ms
+2021-11-16 07:24:07.718 -05:00 [INF] Request starting HTTP/1.1 GET https://localhost:44328/swagger/swagger-ui-bundle.js.map - -
+2021-11-16 07:24:07.801 -05:00 [INF] Request finished HTTP/1.1 GET https://localhost:44328/swagger/swagger-ui-bundle.js.map - - - 404 - - 83.0686ms
+2021-11-16 07:24:07.878 -05:00 [INF] Request starting HTTP/1.1 GET https://localhost:44328/swagger/swagger-ui-standalone-preset.js.map - -
+2021-11-16 07:24:07.887 -05:00 [INF] Request finished HTTP/1.1 GET https://localhost:44328/swagger/swagger-ui-standalone-preset.js.map - - - 404 - - 6.3644ms
+2021-11-16 07:24:07.940 -05:00 [INF] Request starting HTTP/2 GET https://localhost:44328/swagger/v1/swagger.json - -
+2021-11-16 07:24:08.124 -05:00 [INF] Request finished HTTP/2 GET https://localhost:44328/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 183.3183ms
+2021-11-16 07:33:25.349 -05:00 [INF] User profile is available. Using 'C:\Users\Davis Ayus\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2021-11-16 07:33:25.877 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-11-16 07:33:25.882 -05:00 [INF] Hosting environment: Development
+2021-11-16 07:33:25.883 -05:00 [INF] Content root path: C:\Davis\Personal\Willow\Challenge\Properties\Property.WebAPI
+2021-11-16 07:33:25.936 -05:00 [INF] Request starting HTTP/2 GET https://localhost:44328/swagger/index.html - -
+2021-11-16 07:33:26.122 -05:00 [INF] Request finished HTTP/2 GET https://localhost:44328/swagger/index.html - - - 200 - text/html;charset=utf-8 187.5579ms
+2021-11-16 07:33:26.454 -05:00 [INF] Request starting HTTP/1.1 GET https://localhost:44328/swagger/swagger-ui-bundle.js.map - -
+2021-11-16 07:33:26.520 -05:00 [INF] Request finished HTTP/1.1 GET https://localhost:44328/swagger/swagger-ui-bundle.js.map - - - 404 - - 65.8268ms
+2021-11-16 07:33:26.628 -05:00 [INF] Request starting HTTP/1.1 GET https://localhost:44328/swagger/swagger-ui-standalone-preset.js.map - -
+2021-11-16 07:33:26.632 -05:00 [INF] Request finished HTTP/1.1 GET https://localhost:44328/swagger/swagger-ui-standalone-preset.js.map - - - 404 - - 3.2759ms
+2021-11-16 07:33:26.754 -05:00 [INF] Request starting HTTP/2 GET https://localhost:44328/swagger/v1/swagger.json - -
+2021-11-16 07:33:26.929 -05:00 [INF] Request finished HTTP/2 GET https://localhost:44328/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 174.7740ms
+2021-11-16 07:35:01.617 -05:00 [INF] Request starting HTTP/2 POST https://localhost:44328/api/Property/filter application/json 170
+2021-11-16 07:35:01.630 -05:00 [INF] CORS policy execution failed.
+2021-11-16 07:35:01.630 -05:00 [INF] Request origin https://localhost:44328 does not have permission to access the resource.
+2021-11-16 07:35:01.656 -05:00 [INF] Executing endpoint 'Properties.WebAPI.Controllers.v1.PropertyController.GetByAll (Property.WebAPI)'
+2021-11-16 07:35:01.803 -05:00 [INF] Route matched with {action = "GetByAll", controller = "Property"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.List`1[Properties.Entities.Entities.Property]]] GetByAll(Properties.Entities.Dtos.FilterPropertiesDto) on controller Properties.WebAPI.Controllers.v1.PropertyController (Property.WebAPI).
+2021-11-16 07:43:51.526 -05:00 [INF] Executed action Properties.WebAPI.Controllers.v1.PropertyController.GetByAll (Property.WebAPI) in 529713.7332ms
+2021-11-16 07:43:51.531 -05:00 [INF] Executed endpoint 'Properties.WebAPI.Controllers.v1.PropertyController.GetByAll (Property.WebAPI)'
+2021-11-16 07:43:51.535 -05:00 [ERR] An unhandled exception has occurred while executing the request.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at Properties.Core.Core.V1.Errors`1.Error[U](Exception ex, String serviceName, U content) in C:\Davis\Personal\Willow\Challenge\Properties\Property.Core\Core\V1\Errors.cs:line 21
+   at Properties.Core.Core.V1.PropertyCore.GetByAllAsync(FilterPropertiesDto filterProperties) in C:\Davis\Personal\Willow\Challenge\Properties\Property.Core\Core\V1\PropertyCore.cs:line 134
+   at Properties.WebAPI.Controllers.v1.PropertyController.GetByAll(FilterPropertiesDto filterProperties) in C:\Davis\Personal\Willow\Challenge\Properties\Property.WebAPI\Controllers\v1\PropertyController.cs:line 50
+   at lambda_method7(Closure , Object )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2021-11-16 07:43:51.710 -05:00 [INF] Request finished HTTP/2 POST https://localhost:44328/api/Property/filter application/json 170 - 500 - text/plain 530094.8032ms
+2021-11-16 07:43:57.328 -05:00 [INF] Request starting HTTP/2 POST https://localhost:44328/api/Property/filter application/json 170
+2021-11-16 07:43:57.330 -05:00 [INF] CORS policy execution failed.
+2021-11-16 07:43:57.330 -05:00 [INF] Request origin https://localhost:44328 does not have permission to access the resource.
+2021-11-16 07:43:57.335 -05:00 [INF] Executing endpoint 'Properties.WebAPI.Controllers.v1.PropertyController.GetByAll (Property.WebAPI)'
+2021-11-16 07:43:57.417 -05:00 [INF] Route matched with {action = "GetByAll", controller = "Property"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.List`1[Properties.Entities.Entities.Property]]] GetByAll(Properties.Entities.Dtos.FilterPropertiesDto) on controller Properties.WebAPI.Controllers.v1.PropertyController (Property.WebAPI).
+2021-11-16 07:46:25.114 -05:00 [INF] Executing ObjectResult, writing value of type 'Properties.Entities.Models.ResponseService`1[[System.Collections.Generic.List`1[[Properties.Entities.Entities.Property, Properties.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2021-11-16 07:46:25.160 -05:00 [INF] Executed action Properties.WebAPI.Controllers.v1.PropertyController.GetByAll (Property.WebAPI) in 147743.5563ms
+2021-11-16 07:46:25.161 -05:00 [INF] Executed endpoint 'Properties.WebAPI.Controllers.v1.PropertyController.GetByAll (Property.WebAPI)'
+2021-11-16 07:46:25.161 -05:00 [INF] Request finished HTTP/2 POST https://localhost:44328/api/Property/filter application/json 170 - 200 - application/json;+charset=utf-8 147833.9956ms
+2021-11-16 07:46:53.468 -05:00 [INF] Request starting HTTP/2 POST https://localhost:44328/api/Property/filter application/json 162
+2021-11-16 07:46:53.469 -05:00 [INF] CORS policy execution failed.
+2021-11-16 07:46:53.469 -05:00 [INF] Request origin https://localhost:44328 does not have permission to access the resource.
+2021-11-16 07:46:53.471 -05:00 [INF] Executing endpoint 'Properties.WebAPI.Controllers.v1.PropertyController.GetByAll (Property.WebAPI)'
+2021-11-16 07:46:53.472 -05:00 [INF] Route matched with {action = "GetByAll", controller = "Property"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.List`1[Properties.Entities.Entities.Property]]] GetByAll(Properties.Entities.Dtos.FilterPropertiesDto) on controller Properties.WebAPI.Controllers.v1.PropertyController (Property.WebAPI).
+2021-11-16 07:46:58.754 -05:00 [INF] Executing ObjectResult, writing value of type 'Properties.Entities.Models.ResponseService`1[[System.Collections.Generic.List`1[[Properties.Entities.Entities.Property, Properties.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2021-11-16 07:46:58.761 -05:00 [INF] Executed action Properties.WebAPI.Controllers.v1.PropertyController.GetByAll (Property.WebAPI) in 5285.1094ms
+2021-11-16 07:46:58.762 -05:00 [INF] Executed endpoint 'Properties.WebAPI.Controllers.v1.PropertyController.GetByAll (Property.WebAPI)'
+2021-11-16 07:46:58.780 -05:00 [INF] Request finished HTTP/2 POST https://localhost:44328/api/Property/filter application/json 162 - 200 - application/json;+charset=utf-8 5311.2713ms
+2021-11-16 07:48:45.592 -05:00 [INF] Request starting HTTP/2 POST https://localhost:44328/api/Property/filter application/json 230
+2021-11-16 07:48:45.592 -05:00 [INF] CORS policy execution failed.
+2021-11-16 07:48:45.592 -05:00 [INF] Request origin https://localhost:44328 does not have permission to access the resource.
+2021-11-16 07:48:45.593 -05:00 [INF] Executing endpoint 'Properties.WebAPI.Controllers.v1.PropertyController.GetByAll (Property.WebAPI)'
+2021-11-16 07:48:45.597 -05:00 [INF] Route matched with {action = "GetByAll", controller = "Property"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.List`1[Properties.Entities.Entities.Property]]] GetByAll(Properties.Entities.Dtos.FilterPropertiesDto) on controller Properties.WebAPI.Controllers.v1.PropertyController (Property.WebAPI).
+2021-11-16 07:48:45.615 -05:00 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2021-11-16 07:48:45.629 -05:00 [INF] Executed action Properties.WebAPI.Controllers.v1.PropertyController.GetByAll (Property.WebAPI) in 31.1543ms
+2021-11-16 07:48:45.629 -05:00 [INF] Executed endpoint 'Properties.WebAPI.Controllers.v1.PropertyController.GetByAll (Property.WebAPI)'
+2021-11-16 07:48:45.636 -05:00 [INF] Request finished HTTP/2 POST https://localhost:44328/api/Property/filter application/json 230 - 400 - application/problem+json;+charset=utf-8 43.5079ms
+2021-11-16 07:49:02.551 -05:00 [INF] Request starting HTTP/2 POST https://localhost:44328/api/Property/filter application/json 162
+2021-11-16 07:49:02.552 -05:00 [INF] CORS policy execution failed.
+2021-11-16 07:49:02.552 -05:00 [INF] Request origin https://localhost:44328 does not have permission to access the resource.
+2021-11-16 07:49:02.553 -05:00 [INF] Executing endpoint 'Properties.WebAPI.Controllers.v1.PropertyController.GetByAll (Property.WebAPI)'
+2021-11-16 07:49:02.553 -05:00 [INF] Route matched with {action = "GetByAll", controller = "Property"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.List`1[Properties.Entities.Entities.Property]]] GetByAll(Properties.Entities.Dtos.FilterPropertiesDto) on controller Properties.WebAPI.Controllers.v1.PropertyController (Property.WebAPI).
+2021-11-16 07:49:02.557 -05:00 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2021-11-16 07:49:02.558 -05:00 [INF] Executed action Properties.WebAPI.Controllers.v1.PropertyController.GetByAll (Property.WebAPI) in 4.8591ms
+2021-11-16 07:49:02.558 -05:00 [INF] Executed endpoint 'Properties.WebAPI.Controllers.v1.PropertyController.GetByAll (Property.WebAPI)'
+2021-11-16 07:49:02.559 -05:00 [INF] Request finished HTTP/2 POST https://localhost:44328/api/Property/filter application/json 162 - 400 - application/problem+json;+charset=utf-8 7.6183ms
+2021-11-16 07:49:20.591 -05:00 [INF] Request starting HTTP/2 POST https://localhost:44328/api/Property/filter application/json 161
+2021-11-16 07:49:20.592 -05:00 [INF] CORS policy execution failed.
+2021-11-16 07:49:20.592 -05:00 [INF] Request origin https://localhost:44328 does not have permission to access the resource.
+2021-11-16 07:49:20.593 -05:00 [INF] Executing endpoint 'Properties.WebAPI.Controllers.v1.PropertyController.GetByAll (Property.WebAPI)'
+2021-11-16 07:49:20.597 -05:00 [INF] Route matched with {action = "GetByAll", controller = "Property"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.List`1[Properties.Entities.Entities.Property]]] GetByAll(Properties.Entities.Dtos.FilterPropertiesDto) on controller Properties.WebAPI.Controllers.v1.PropertyController (Property.WebAPI).
+2021-11-16 07:49:23.951 -05:00 [INF] Executing ObjectResult, writing value of type 'Properties.Entities.Models.ResponseService`1[[System.Collections.Generic.List`1[[Properties.Entities.Entities.Property, Properties.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2021-11-16 07:49:23.952 -05:00 [INF] Executed action Properties.WebAPI.Controllers.v1.PropertyController.GetByAll (Property.WebAPI) in 3353.9548ms
+2021-11-16 07:49:23.952 -05:00 [INF] Executed endpoint 'Properties.WebAPI.Controllers.v1.PropertyController.GetByAll (Property.WebAPI)'
+2021-11-16 07:49:23.956 -05:00 [INF] Request finished HTTP/2 POST https://localhost:44328/api/Property/filter application/json 161 - 200 - application/json;+charset=utf-8 3362.1347ms
+2021-11-16 07:49:50.769 -05:00 [INF] Request starting HTTP/2 POST https://localhost:44328/api/Property/filter application/json 161
+2021-11-16 07:49:50.769 -05:00 [INF] CORS policy execution failed.
+2021-11-16 07:49:50.769 -05:00 [INF] Request origin https://localhost:44328 does not have permission to access the resource.
+2021-11-16 07:49:50.769 -05:00 [INF] Executing endpoint 'Properties.WebAPI.Controllers.v1.PropertyController.GetByAll (Property.WebAPI)'
+2021-11-16 07:49:50.770 -05:00 [INF] Route matched with {action = "GetByAll", controller = "Property"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.List`1[Properties.Entities.Entities.Property]]] GetByAll(Properties.Entities.Dtos.FilterPropertiesDto) on controller Properties.WebAPI.Controllers.v1.PropertyController (Property.WebAPI).
+2021-11-16 07:50:13.166 -05:00 [INF] Executing ObjectResult, writing value of type 'Properties.Entities.Models.ResponseService`1[[System.Collections.Generic.List`1[[Properties.Entities.Entities.Property, Properties.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2021-11-16 07:50:13.167 -05:00 [INF] Executed action Properties.WebAPI.Controllers.v1.PropertyController.GetByAll (Property.WebAPI) in 22395.8135ms
+2021-11-16 07:50:13.167 -05:00 [INF] Executed endpoint 'Properties.WebAPI.Controllers.v1.PropertyController.GetByAll (Property.WebAPI)'
+2021-11-16 07:50:13.168 -05:00 [INF] Request finished HTTP/2 POST https://localhost:44328/api/Property/filter application/json 161 - 200 - application/json;+charset=utf-8 22398.7955ms
+2021-11-16 07:50:21.645 -05:00 [INF] Request starting HTTP/2 POST https://localhost:44328/api/Property/filter application/json 161
+2021-11-16 07:50:21.646 -05:00 [INF] CORS policy execution failed.
+2021-11-16 07:50:21.646 -05:00 [INF] Request origin https://localhost:44328 does not have permission to access the resource.
+2021-11-16 07:50:21.646 -05:00 [INF] Executing endpoint 'Properties.WebAPI.Controllers.v1.PropertyController.GetByAll (Property.WebAPI)'
+2021-11-16 07:50:21.646 -05:00 [INF] Route matched with {action = "GetByAll", controller = "Property"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.List`1[Properties.Entities.Entities.Property]]] GetByAll(Properties.Entities.Dtos.FilterPropertiesDto) on controller Properties.WebAPI.Controllers.v1.PropertyController (Property.WebAPI).
+2021-11-16 08:17:14.518 -05:00 [INF] Executing ObjectResult, writing value of type 'Properties.Entities.Models.ResponseService`1[[System.Collections.Generic.List`1[[Properties.Entities.Entities.Property, Properties.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2021-11-16 08:17:14.518 -05:00 [INF] Executed action Properties.WebAPI.Controllers.v1.PropertyController.GetByAll (Property.WebAPI) in 1612872.1679ms
+2021-11-16 08:17:14.519 -05:00 [INF] Executed endpoint 'Properties.WebAPI.Controllers.v1.PropertyController.GetByAll (Property.WebAPI)'
+2021-11-16 08:17:14.519 -05:00 [INF] Request finished HTTP/2 POST https://localhost:44328/api/Property/filter application/json 161 - 200 - application/json;+charset=utf-8 1612873.8598ms
+2021-11-16 08:58:59.778 -05:00 [INF] User profile is available. Using 'C:\Users\Davis Ayus\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2021-11-16 08:59:00.566 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-11-16 08:59:00.567 -05:00 [INF] Hosting environment: Development
+2021-11-16 08:59:00.567 -05:00 [INF] Content root path: C:\Davis\Personal\Willow\Challenge\Properties\Property.WebAPI
+2021-11-16 08:59:00.633 -05:00 [INF] Request starting HTTP/2 GET https://localhost:44328/swagger/index.html - -
+2021-11-16 08:59:00.826 -05:00 [INF] Request finished HTTP/2 GET https://localhost:44328/swagger/index.html - - - 200 - text/html;charset=utf-8 191.5527ms
+2021-11-16 08:59:01.145 -05:00 [INF] Request starting HTTP/1.1 GET https://localhost:44328/swagger/swagger-ui-bundle.js.map - -
+2021-11-16 08:59:01.223 -05:00 [INF] Request finished HTTP/1.1 GET https://localhost:44328/swagger/swagger-ui-bundle.js.map - - - 404 - - 78.1603ms
+2021-11-16 08:59:01.317 -05:00 [INF] Request starting HTTP/1.1 GET https://localhost:44328/swagger/swagger-ui-standalone-preset.js.map - -
+2021-11-16 08:59:01.319 -05:00 [INF] Request finished HTTP/1.1 GET https://localhost:44328/swagger/swagger-ui-standalone-preset.js.map - - - 404 - - 2.1209ms
+2021-11-16 08:59:01.392 -05:00 [INF] Request starting HTTP/2 GET https://localhost:44328/swagger/v1/swagger.json - -
+2021-11-16 08:59:01.577 -05:00 [INF] Request finished HTTP/2 GET https://localhost:44328/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 185.5195ms
+2021-11-16 08:59:26.286 -05:00 [INF] Request starting HTTP/2 POST https://localhost:44328/api/Property/filter application/json 161
+2021-11-16 08:59:26.296 -05:00 [INF] CORS policy execution failed.
+2021-11-16 08:59:26.296 -05:00 [INF] Request origin https://localhost:44328 does not have permission to access the resource.
+2021-11-16 08:59:26.320 -05:00 [INF] Executing endpoint 'Properties.WebAPI.Controllers.v1.PropertyController.GetByAll (Property.WebAPI)'
+2021-11-16 08:59:26.452 -05:00 [INF] Route matched with {action = "GetByAll", controller = "Property"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.List`1[Properties.Entities.Entities.Property]]] GetByAll(Properties.Entities.Dtos.FilterPropertiesDto) on controller Properties.WebAPI.Controllers.v1.PropertyController (Property.WebAPI).
+2021-11-16 08:59:44.563 -05:00 [INF] Executing ObjectResult, writing value of type 'Properties.Entities.Models.ResponseService`1[[System.Collections.Generic.List`1[[Properties.Entities.Entities.Property, Properties.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2021-11-16 08:59:44.651 -05:00 [INF] Executed action Properties.WebAPI.Controllers.v1.PropertyController.GetByAll (Property.WebAPI) in 18186.6549ms
+2021-11-16 08:59:44.656 -05:00 [INF] Executed endpoint 'Properties.WebAPI.Controllers.v1.PropertyController.GetByAll (Property.WebAPI)'
+2021-11-16 08:59:44.660 -05:00 [INF] Request finished HTTP/2 POST https://localhost:44328/api/Property/filter application/json 161 - 200 - application/json;+charset=utf-8 18374.6149ms
+2021-11-16 09:00:10.939 -05:00 [INF] Request starting HTTP/2 POST https://localhost:44328/api/Property/filter application/json 162
+2021-11-16 09:00:10.942 -05:00 [INF] CORS policy execution failed.
+2021-11-16 09:00:10.942 -05:00 [INF] Request origin https://localhost:44328 does not have permission to access the resource.
+2021-11-16 09:00:10.965 -05:00 [INF] Executing endpoint 'Properties.WebAPI.Controllers.v1.PropertyController.GetByAll (Property.WebAPI)'
+2021-11-16 09:00:10.966 -05:00 [INF] Route matched with {action = "GetByAll", controller = "Property"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.List`1[Properties.Entities.Entities.Property]]] GetByAll(Properties.Entities.Dtos.FilterPropertiesDto) on controller Properties.WebAPI.Controllers.v1.PropertyController (Property.WebAPI).
+2021-11-16 09:00:16.654 -05:00 [INF] Executing ObjectResult, writing value of type 'Properties.Entities.Models.ResponseService`1[[System.Collections.Generic.List`1[[Properties.Entities.Entities.Property, Properties.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2021-11-16 09:00:16.655 -05:00 [INF] Executed action Properties.WebAPI.Controllers.v1.PropertyController.GetByAll (Property.WebAPI) in 5689.0881ms
+2021-11-16 09:00:16.655 -05:00 [INF] Executed endpoint 'Properties.WebAPI.Controllers.v1.PropertyController.GetByAll (Property.WebAPI)'
+2021-11-16 09:00:16.656 -05:00 [INF] Request finished HTTP/2 POST https://localhost:44328/api/Property/filter application/json 162 - 200 - application/json;+charset=utf-8 5716.8703ms
+2021-11-16 09:04:02.044 -05:00 [INF] Request starting HTTP/2 POST https://localhost:44328/api/Property application/json 1485
+2021-11-16 09:04:02.044 -05:00 [INF] CORS policy execution failed.
+2021-11-16 09:04:02.044 -05:00 [INF] Request origin https://localhost:44328 does not have permission to access the resource.
+2021-11-16 09:04:02.045 -05:00 [INF] Executing endpoint 'Properties.WebAPI.Controllers.v1.PropertyController.Post (Property.WebAPI)'
+2021-11-16 09:04:02.055 -05:00 [INF] Route matched with {action = "Post", controller = "Property"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Properties.Entities.Entities.Property]] Post(Properties.Entities.Entities.Property) on controller Properties.WebAPI.Controllers.v1.PropertyController (Property.WebAPI).
+2021-11-16 09:32:45.369 -05:00 [INF] User profile is available. Using 'C:\Users\Davis Ayus\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2021-11-16 09:32:46.027 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-11-16 09:32:46.028 -05:00 [INF] Hosting environment: Development
+2021-11-16 09:32:46.028 -05:00 [INF] Content root path: C:\Davis\Personal\Willow\Challenge\Properties\Property.WebAPI
+2021-11-16 09:32:46.112 -05:00 [INF] Request starting HTTP/2 GET https://localhost:44328/swagger/index.html - -
+2021-11-16 09:32:46.323 -05:00 [INF] Request finished HTTP/2 GET https://localhost:44328/swagger/index.html - - - 200 - text/html;charset=utf-8 214.3764ms
+2021-11-16 09:32:46.614 -05:00 [INF] Request starting HTTP/1.1 GET https://localhost:44328/swagger/swagger-ui-bundle.js.map - -
+2021-11-16 09:32:46.719 -05:00 [INF] Request finished HTTP/1.1 GET https://localhost:44328/swagger/swagger-ui-bundle.js.map - - - 404 - - 105.2001ms
+2021-11-16 09:32:46.811 -05:00 [INF] Request starting HTTP/1.1 GET https://localhost:44328/swagger/swagger-ui-standalone-preset.js.map - -
+2021-11-16 09:32:46.813 -05:00 [INF] Request finished HTTP/1.1 GET https://localhost:44328/swagger/swagger-ui-standalone-preset.js.map - - - 404 - - 1.9104ms
+2021-11-16 09:32:46.857 -05:00 [INF] Request starting HTTP/2 GET https://localhost:44328/swagger/v1/swagger.json - -
+2021-11-16 09:32:47.041 -05:00 [INF] Request finished HTTP/2 GET https://localhost:44328/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 184.1934ms
+2021-11-21 11:06:22.670 -05:00 [INF] User profile is available. Using 'C:\Users\Davis Ayus\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2021-11-21 11:06:23.117 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-11-21 11:06:23.117 -05:00 [INF] Hosting environment: Development
+2021-11-21 11:06:23.117 -05:00 [INF] Content root path: C:\Davis\Personal\Willow\Challenge\Properties\Property.WebAPI
+2021-11-21 11:06:23.137 -05:00 [INF] Request starting HTTP/2 GET https://localhost:44328/swagger - -
+2021-11-21 11:06:23.200 -05:00 [INF] Request starting HTTP/2 GET https://localhost:44328/swagger/index.html - -
+2021-11-21 11:06:23.213 -05:00 [INF] Request finished HTTP/2 GET https://localhost:44328/swagger - - - 301 - - 76.3433ms
+2021-11-21 11:06:23.346 -05:00 [INF] Request finished HTTP/2 GET https://localhost:44328/swagger/index.html - - - 200 - text/html;charset=utf-8 146.2690ms
+2021-11-21 11:06:23.348 -05:00 [INF] Request starting HTTP/2 GET https://localhost:44328/swagger/swagger-ui.css - -
+2021-11-21 11:06:23.349 -05:00 [INF] Request starting HTTP/2 GET https://localhost:44328/swagger/swagger-ui-bundle.js - -
+2021-11-21 11:06:23.349 -05:00 [INF] Request starting HTTP/2 GET https://localhost:44328/_framework/aspnetcore-browser-refresh.js - -
+2021-11-21 11:06:23.349 -05:00 [INF] Request starting HTTP/2 GET https://localhost:44328/swagger/swagger-ui-standalone-preset.js - -
+2021-11-21 11:06:23.353 -05:00 [INF] Request finished HTTP/2 GET https://localhost:44328/_framework/aspnetcore-browser-refresh.js - - - 200 3090 application/javascript;+charset=utf-8 2.0541ms
+2021-11-21 11:06:23.399 -05:00 [INF] Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+2021-11-21 11:06:23.399 -05:00 [INF] Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+2021-11-21 11:06:23.399 -05:00 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2021-11-21 11:06:23.405 -05:00 [INF] Request finished HTTP/2 GET https://localhost:44328/swagger/swagger-ui.css - - - 200 142933 text/css 56.9259ms
+2021-11-21 11:06:23.410 -05:00 [INF] Request finished HTTP/2 GET https://localhost:44328/swagger/swagger-ui-standalone-preset.js - - - 200 311804 application/javascript 60.6874ms
+2021-11-21 11:06:23.424 -05:00 [INF] Request finished HTTP/2 GET https://localhost:44328/swagger/swagger-ui-bundle.js - - - 200 986342 application/javascript 75.1360ms
+2021-11-21 11:06:23.651 -05:00 [INF] Request starting HTTP/2 GET https://localhost:44328/swagger/v1/swagger.json - -
+2021-11-21 11:06:23.709 -05:00 [INF] Request starting HTTP/2 GET https://localhost:44328/swagger/favicon-32x32.png - -
+2021-11-21 11:06:23.710 -05:00 [INF] Sending file. Request path: '/favicon-32x32.png'. Physical path: 'N/A'
+2021-11-21 11:06:23.710 -05:00 [INF] Request finished HTTP/2 GET https://localhost:44328/swagger/favicon-32x32.png - - - 200 628 image/png 0.8186ms
+2021-11-21 11:06:23.829 -05:00 [INF] Request finished HTTP/2 GET https://localhost:44328/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 177.4670ms
+2021-11-21 11:14:28.011 -05:00 [INF] User profile is available. Using 'C:\Users\Davis Ayus\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2021-11-21 11:14:28.671 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-11-21 11:14:28.672 -05:00 [INF] Hosting environment: Development
+2021-11-21 11:14:28.672 -05:00 [INF] Content root path: C:\Davis\Personal\Willow\Challenge\Properties\Property.WebAPI
+2021-11-21 11:14:28.705 -05:00 [INF] Request starting HTTP/2 GET https://localhost:44328/swagger/index.html - -
+2021-11-21 11:14:28.818 -05:00 [INF] Request finished HTTP/2 GET https://localhost:44328/swagger/index.html - - - 200 - text/html;charset=utf-8 114.7303ms
+2021-11-21 11:14:29.089 -05:00 [INF] Request starting HTTP/1.1 GET https://localhost:44328/swagger/swagger-ui-bundle.js.map - -
+2021-11-21 11:14:29.198 -05:00 [INF] Request finished HTTP/1.1 GET https://localhost:44328/swagger/swagger-ui-bundle.js.map - - - 404 - - 108.5678ms
+2021-11-21 11:14:29.401 -05:00 [INF] Request starting HTTP/1.1 GET https://localhost:44328/swagger/swagger-ui-standalone-preset.js.map - -
+2021-11-21 11:14:29.403 -05:00 [INF] Request finished HTTP/1.1 GET https://localhost:44328/swagger/swagger-ui-standalone-preset.js.map - - - 404 - - 2.3812ms
+2021-11-21 11:14:29.506 -05:00 [INF] Request starting HTTP/2 GET https://localhost:44328/swagger/v1/swagger.json - -
+2021-11-21 11:14:29.672 -05:00 [INF] Request finished HTTP/2 GET https://localhost:44328/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 165.9361ms
+2021-11-21 11:14:32.042 -05:00 [INF] Request starting HTTP/2 POST https://localhost:44328/api/Property multipart/form-data;+boundary=----WebKitFormBoundarygK0iBEhcI8BAcKAJ 5630
+2021-11-21 11:14:32.046 -05:00 [INF] CORS policy execution failed.
+2021-11-21 11:14:32.047 -05:00 [INF] Request origin https://localhost:44328 does not have permission to access the resource.
+2021-11-21 11:14:32.078 -05:00 [INF] Executing endpoint 'Properties.WebAPI.Controllers.v1.PropertyController.Post (Property.WebAPI)'
+2021-11-21 11:14:32.193 -05:00 [INF] Route matched with {action = "Post", controller = "Property"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Properties.Entities.Entities.Property]] Post(Properties.Entities.Dtos.PropertyCreateDto) on controller Properties.WebAPI.Controllers.v1.PropertyController (Property.WebAPI).
+2021-11-21 11:16:23.337 -05:00 [ERR] Service: AddPropertyAsync, Message: An error occurred while updating the entries. See the inner exception for details. The conversion of a datetime2 data type to a datetime data type resulted in an out-of-range value.
+The statement has been terminated.)? 
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while updating the entries. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): The conversion of a datetime2 data type to a datetime data type resulted in an out-of-range value.
+The statement has been terminated.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__169_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.Tasks.Task.<>c.<.cctor>b__277_0(Object obj)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+ClientConnectionId:fe4a0b24-32e4-44df-b57f-d96bc67b6e33
+Error Number:242,State:3,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(DbContext _, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Properties.Repository.Repository.PropertyRepository.AddAsync(Property entity) in C:\Davis\Personal\Willow\Challenge\Properties\Property.Repository\Repository\PropertyRepository.cs:line 28
+   at Properties.Core.Core.V1.PropertyCore.AddAsync(PropertyCreateDto entityCreate) in C:\Davis\Personal\Willow\Challenge\Properties\Property.Core\Core\V1\PropertyCore.cs:line 38
+2021-11-21 11:16:26.133 -05:00 [INF] Executing ObjectResult, writing value of type 'Properties.Entities.Models.ResponseService`1[[Properties.Entities.Entities.Property, Properties.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2021-11-21 11:16:26.200 -05:00 [INF] Executed action Properties.WebAPI.Controllers.v1.PropertyController.Post (Property.WebAPI) in 114002.8926ms
+2021-11-21 11:16:26.202 -05:00 [INF] Executed endpoint 'Properties.WebAPI.Controllers.v1.PropertyController.Post (Property.WebAPI)'
+2021-11-21 11:16:26.209 -05:00 [INF] Request finished HTTP/2 POST https://localhost:44328/api/Property multipart/form-data;+boundary=----WebKitFormBoundarygK0iBEhcI8BAcKAJ 5630 - 500 - application/json;+charset=utf-8 114166.7006ms
+2021-11-21 11:18:39.305 -05:00 [INF] User profile is available. Using 'C:\Users\Davis Ayus\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2021-11-21 11:18:39.720 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-11-21 11:18:39.721 -05:00 [INF] Hosting environment: Development
+2021-11-21 11:18:39.721 -05:00 [INF] Content root path: C:\Davis\Personal\Willow\Challenge\Properties\Property.WebAPI
+2021-11-21 11:18:39.773 -05:00 [INF] Request starting HTTP/2 GET https://localhost:44328/swagger/index.html - -
+2021-11-21 11:18:39.922 -05:00 [INF] Request finished HTTP/2 GET https://localhost:44328/swagger/index.html - - - 200 - text/html;charset=utf-8 149.1341ms
+2021-11-21 11:18:40.208 -05:00 [INF] Request starting HTTP/1.1 GET https://localhost:44328/swagger/swagger-ui-bundle.js.map - -
+2021-11-21 11:18:40.283 -05:00 [INF] Request finished HTTP/1.1 GET https://localhost:44328/swagger/swagger-ui-bundle.js.map - - - 404 - - 75.4423ms
+2021-11-21 11:18:40.433 -05:00 [INF] Request starting HTTP/1.1 GET https://localhost:44328/swagger/swagger-ui-standalone-preset.js.map - -
+2021-11-21 11:18:40.438 -05:00 [INF] Request finished HTTP/1.1 GET https://localhost:44328/swagger/swagger-ui-standalone-preset.js.map - - - 404 - - 4.7187ms
+2021-11-21 11:18:40.536 -05:00 [INF] Request starting HTTP/2 GET https://localhost:44328/swagger/v1/swagger.json - -
+2021-11-21 11:18:40.698 -05:00 [INF] Request finished HTTP/2 GET https://localhost:44328/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 161.3173ms
+2021-11-21 11:18:54.949 -05:00 [INF] User profile is available. Using 'C:\Users\Davis Ayus\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2021-11-21 11:18:55.379 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-11-21 11:18:55.380 -05:00 [INF] Hosting environment: Development
+2021-11-21 11:18:55.381 -05:00 [INF] Content root path: C:\Davis\Personal\Willow\Challenge\Properties\Property.WebAPI
+2021-11-21 11:18:55.442 -05:00 [INF] Request starting HTTP/2 GET https://localhost:44328/swagger/index.html - -
+2021-11-21 11:18:55.588 -05:00 [INF] Request finished HTTP/2 GET https://localhost:44328/swagger/index.html - - - 200 - text/html;charset=utf-8 148.7733ms
+2021-11-21 11:18:55.864 -05:00 [INF] Request starting HTTP/1.1 GET https://localhost:44328/swagger/swagger-ui-bundle.js.map - -
+2021-11-21 11:18:55.939 -05:00 [INF] Request finished HTTP/1.1 GET https://localhost:44328/swagger/swagger-ui-bundle.js.map - - - 404 - - 74.7135ms
+2021-11-21 11:18:56.015 -05:00 [INF] Request starting HTTP/1.1 GET https://localhost:44328/swagger/swagger-ui-standalone-preset.js.map - -
+2021-11-21 11:18:56.018 -05:00 [INF] Request finished HTTP/1.1 GET https://localhost:44328/swagger/swagger-ui-standalone-preset.js.map - - - 404 - - 2.8630ms
+2021-11-21 11:18:56.065 -05:00 [INF] Request starting HTTP/2 GET https://localhost:44328/swagger/v1/swagger.json - -
+2021-11-21 11:18:56.254 -05:00 [INF] Request finished HTTP/2 GET https://localhost:44328/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 188.9233ms
+2021-11-21 11:19:24.124 -05:00 [INF] Request starting HTTP/2 POST https://localhost:44328/api/Property multipart/form-data;+boundary=----WebKitFormBoundarybcjfNTcU7u1TaNLP 5630
+2021-11-21 11:19:24.128 -05:00 [INF] CORS policy execution failed.
+2021-11-21 11:19:24.129 -05:00 [INF] Request origin https://localhost:44328 does not have permission to access the resource.
+2021-11-21 11:19:24.147 -05:00 [INF] Executing endpoint 'Properties.WebAPI.Controllers.v1.PropertyController.Post (Property.WebAPI)'
+2021-11-21 11:19:24.230 -05:00 [INF] Route matched with {action = "Post", controller = "Property"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Properties.Entities.Entities.Property]] Post(Properties.Entities.Dtos.PropertyCreateDto) on controller Properties.WebAPI.Controllers.v1.PropertyController (Property.WebAPI).
+2021-11-21 11:19:43.485 -05:00 [ERR] Service: AddPropertyAsync, Message: An error occurred while updating the entries. See the inner exception for details. String or binary data would be truncated in table 'PropertiesDb.dbo.Properties', column 'State'. Truncated value: 'CO'.
+The statement has been terminated.)? 
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while updating the entries. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): String or binary data would be truncated in table 'PropertiesDb.dbo.Properties', column 'State'. Truncated value: 'CO'.
+The statement has been terminated.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__169_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.Tasks.Task.<>c.<.cctor>b__277_0(Object obj)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+ClientConnectionId:51be7a2a-be1d-4c26-9405-c01d72e9d929
+Error Number:2628,State:1,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(DbContext _, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Properties.Repository.Repository.PropertyRepository.AddAsync(Property entity) in C:\Davis\Personal\Willow\Challenge\Properties\Property.Repository\Repository\PropertyRepository.cs:line 28
+   at Properties.Core.Core.V1.PropertyCore.AddAsync(PropertyCreateDto entityCreate) in C:\Davis\Personal\Willow\Challenge\Properties\Property.Core\Core\V1\PropertyCore.cs:line 42
+2021-11-21 11:19:43.609 -05:00 [INF] Executing ObjectResult, writing value of type 'Properties.Entities.Models.ResponseService`1[[Properties.Entities.Entities.Property, Properties.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2021-11-21 11:19:43.668 -05:00 [INF] Executed action Properties.WebAPI.Controllers.v1.PropertyController.Post (Property.WebAPI) in 19430.4051ms
+2021-11-21 11:19:43.671 -05:00 [INF] Executed endpoint 'Properties.WebAPI.Controllers.v1.PropertyController.Post (Property.WebAPI)'
+2021-11-21 11:19:43.673 -05:00 [INF] Request finished HTTP/2 POST https://localhost:44328/api/Property multipart/form-data;+boundary=----WebKitFormBoundarybcjfNTcU7u1TaNLP 5630 - 500 - application/json;+charset=utf-8 19549.3453ms
+2021-11-21 11:20:28.257 -05:00 [INF] Request starting HTTP/2 POST https://localhost:44328/api/Property multipart/form-data;+boundary=----WebKitFormBoundaryAyfe7sv60MA0VFkB 5626
+2021-11-21 11:20:28.258 -05:00 [INF] CORS policy execution failed.
+2021-11-21 11:20:28.259 -05:00 [INF] Request origin https://localhost:44328 does not have permission to access the resource.
+2021-11-21 11:20:28.264 -05:00 [INF] Executing endpoint 'Properties.WebAPI.Controllers.v1.PropertyController.Post (Property.WebAPI)'
+2021-11-21 11:20:28.265 -05:00 [INF] Route matched with {action = "Post", controller = "Property"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Properties.Entities.Entities.Property]] Post(Properties.Entities.Dtos.PropertyCreateDto) on controller Properties.WebAPI.Controllers.v1.PropertyController (Property.WebAPI).
+2021-11-21 11:20:35.674 -05:00 [ERR] Service: AddPropertyAsync, Message: An error occurred while updating the entries. See the inner exception for details. String or binary data would be truncated in table 'PropertiesDb.dbo.Properties', column 'ZipCode'. Truncated value: '05542'.
+The statement has been terminated.)? 
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while updating the entries. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): String or binary data would be truncated in table 'PropertiesDb.dbo.Properties', column 'ZipCode'. Truncated value: '05542'.
+The statement has been terminated.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__169_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.Tasks.Task.<>c.<.cctor>b__277_0(Object obj)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+ClientConnectionId:51be7a2a-be1d-4c26-9405-c01d72e9d929
+Error Number:2628,State:1,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(DbContext _, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Properties.Repository.Repository.PropertyRepository.AddAsync(Property entity) in C:\Davis\Personal\Willow\Challenge\Properties\Property.Repository\Repository\PropertyRepository.cs:line 28
+   at Properties.Core.Core.V1.PropertyCore.AddAsync(PropertyCreateDto entityCreate) in C:\Davis\Personal\Willow\Challenge\Properties\Property.Core\Core\V1\PropertyCore.cs:line 42
+2021-11-21 11:20:35.693 -05:00 [INF] Executing ObjectResult, writing value of type 'Properties.Entities.Models.ResponseService`1[[Properties.Entities.Entities.Property, Properties.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2021-11-21 11:20:35.694 -05:00 [INF] Executed action Properties.WebAPI.Controllers.v1.PropertyController.Post (Property.WebAPI) in 7428.9931ms
+2021-11-21 11:20:35.695 -05:00 [INF] Executed endpoint 'Properties.WebAPI.Controllers.v1.PropertyController.Post (Property.WebAPI)'
+2021-11-21 11:20:35.695 -05:00 [INF] Request finished HTTP/2 POST https://localhost:44328/api/Property multipart/form-data;+boundary=----WebKitFormBoundaryAyfe7sv60MA0VFkB 5626 - 500 - application/json;+charset=utf-8 7437.7042ms
+2021-11-21 11:21:01.212 -05:00 [INF] Request starting HTTP/2 POST https://localhost:44328/api/Property multipart/form-data;+boundary=----WebKitFormBoundarywovR5BscdAchoBJO 5625
+2021-11-21 11:21:01.212 -05:00 [INF] CORS policy execution failed.
+2021-11-21 11:21:01.212 -05:00 [INF] Request origin https://localhost:44328 does not have permission to access the resource.
+2021-11-21 11:21:01.212 -05:00 [INF] Executing endpoint 'Properties.WebAPI.Controllers.v1.PropertyController.Post (Property.WebAPI)'
+2021-11-21 11:21:01.214 -05:00 [INF] Route matched with {action = "Post", controller = "Property"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Properties.Entities.Entities.Property]] Post(Properties.Entities.Dtos.PropertyCreateDto) on controller Properties.WebAPI.Controllers.v1.PropertyController (Property.WebAPI).
+2021-11-21 11:21:04.890 -05:00 [INF] Executing ObjectResult, writing value of type 'Properties.Entities.Models.ResponseService`1[[Properties.Entities.Entities.Property, Properties.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2021-11-21 11:21:04.890 -05:00 [INF] Executed action Properties.WebAPI.Controllers.v1.PropertyController.Post (Property.WebAPI) in 3675.9431ms
+2021-11-21 11:21:04.890 -05:00 [INF] Executed endpoint 'Properties.WebAPI.Controllers.v1.PropertyController.Post (Property.WebAPI)'
+2021-11-21 11:21:04.890 -05:00 [INF] Request finished HTTP/2 POST https://localhost:44328/api/Property multipart/form-data;+boundary=----WebKitFormBoundarywovR5BscdAchoBJO 5625 - 201 - application/json;+charset=utf-8 3678.6221ms
+2021-11-21 11:21:30.225 -05:00 [INF] Request starting HTTP/2 GET https://localhost:44328/api/Property - -
+2021-11-21 11:21:30.226 -05:00 [INF] Executing endpoint 'Properties.WebAPI.Controllers.v1.PropertyController.Get (Property.WebAPI)'
+2021-11-21 11:21:30.255 -05:00 [INF] Route matched with {action = "Get", controller = "Property"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[Properties.Entities.Entities.Property]]] Get() on controller Properties.WebAPI.Controllers.v1.PropertyController (Property.WebAPI).
+2021-11-21 11:21:30.665 -05:00 [INF] Executing ObjectResult, writing value of type 'Properties.Entities.Models.ResponseService`1[[System.Collections.Generic.List`1[[Properties.Entities.Entities.Property, Properties.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2021-11-21 11:21:30.668 -05:00 [INF] Executed action Properties.WebAPI.Controllers.v1.PropertyController.Get (Property.WebAPI) in 412.1831ms
+2021-11-21 11:21:30.668 -05:00 [INF] Executed endpoint 'Properties.WebAPI.Controllers.v1.PropertyController.Get (Property.WebAPI)'
+2021-11-21 11:21:30.708 -05:00 [INF] Request finished HTTP/2 GET https://localhost:44328/api/Property - - - 200 - application/json;+charset=utf-8 483.0240ms
+2021-11-21 12:12:54.365 -05:00 [INF] User profile is available. Using 'C:\Users\Davis Ayus\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2021-11-21 12:12:54.822 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-11-21 12:12:54.823 -05:00 [INF] Hosting environment: Development
+2021-11-21 12:12:54.823 -05:00 [INF] Content root path: C:\Davis\Personal\Willow\Challenge\Properties\Property.WebAPI
+2021-11-21 12:12:54.880 -05:00 [INF] Request starting HTTP/2 GET https://localhost:44328/swagger/index.html - -
+2021-11-21 12:12:55.067 -05:00 [INF] Request finished HTTP/2 GET https://localhost:44328/swagger/index.html - - - 200 - text/html;charset=utf-8 189.0996ms
+2021-11-21 12:12:55.254 -05:00 [INF] Request starting HTTP/1.1 GET https://localhost:44328/swagger/swagger-ui-bundle.js.map - -
+2021-11-21 12:12:55.292 -05:00 [INF] Request finished HTTP/1.1 GET https://localhost:44328/swagger/swagger-ui-bundle.js.map - - - 404 - - 37.3129ms
+2021-11-21 12:12:55.410 -05:00 [INF] Request starting HTTP/1.1 GET https://localhost:44328/swagger/swagger-ui-standalone-preset.js.map - -
+2021-11-21 12:12:55.415 -05:00 [INF] Request finished HTTP/1.1 GET https://localhost:44328/swagger/swagger-ui-standalone-preset.js.map - - - 404 - - 5.6749ms
+2021-11-21 12:12:55.523 -05:00 [INF] Request starting HTTP/2 GET https://localhost:44328/swagger/v1/swagger.json - -
+2021-11-21 12:12:55.645 -05:00 [INF] Request finished HTTP/2 GET https://localhost:44328/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 141.9952ms
+2021-11-21 12:32:02.191 -05:00 [INF] Request starting HTTP/2 GET https://localhost:44328/api/Property - -
+2021-11-21 12:32:02.266 -05:00 [INF] Executing endpoint 'Properties.WebAPI.Controllers.v1.PropertyController.Get (Property.WebAPI)'
+2021-11-21 12:32:02.313 -05:00 [INF] Route matched with {action = "Get", controller = "Property"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[Properties.Entities.Entities.Property]]] Get() on controller Properties.WebAPI.Controllers.v1.PropertyController (Property.WebAPI).
+2021-11-21 12:32:04.783 -05:00 [INF] Executing ObjectResult, writing value of type 'Properties.Entities.Models.ResponseService`1[[System.Collections.Generic.List`1[[Properties.Entities.Dtos.PropertyDto, Properties.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2021-11-21 12:32:04.819 -05:00 [INF] Executed action Properties.WebAPI.Controllers.v1.PropertyController.Get (Property.WebAPI) in 2493.9523ms
+2021-11-21 12:32:04.830 -05:00 [INF] Executed endpoint 'Properties.WebAPI.Controllers.v1.PropertyController.Get (Property.WebAPI)'
+2021-11-21 12:32:04.834 -05:00 [INF] Request finished HTTP/2 GET https://localhost:44328/api/Property - - - 200 - application/json;+charset=utf-8 2643.0519ms
+2021-11-21 12:52:06.236 -05:00 [INF] User profile is available. Using 'C:\Users\Davis Ayus\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2021-11-21 12:52:06.722 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-11-21 12:52:06.727 -05:00 [INF] Hosting environment: Development
+2021-11-21 12:52:06.727 -05:00 [INF] Content root path: C:\Davis\Personal\Willow\Challenge\Properties\Property.WebAPI
+2021-11-21 12:52:06.771 -05:00 [INF] Request starting HTTP/2 GET https://localhost:44328/swagger/index.html - -
+2021-11-21 12:52:06.941 -05:00 [INF] Request finished HTTP/2 GET https://localhost:44328/swagger/index.html - - - 200 - text/html;charset=utf-8 177.8406ms
+2021-11-21 12:52:07.173 -05:00 [INF] Request starting HTTP/1.1 GET https://localhost:44328/swagger/swagger-ui-bundle.js.map - -
+2021-11-21 12:52:07.237 -05:00 [INF] Request finished HTTP/1.1 GET https://localhost:44328/swagger/swagger-ui-bundle.js.map - - - 404 - - 64.1921ms
+2021-11-21 12:52:07.339 -05:00 [INF] Request starting HTTP/1.1 GET https://localhost:44328/swagger/swagger-ui-standalone-preset.js.map - -
+2021-11-21 12:52:07.344 -05:00 [INF] Request finished HTTP/1.1 GET https://localhost:44328/swagger/swagger-ui-standalone-preset.js.map - - - 404 - - 3.9618ms
+2021-11-21 12:52:07.441 -05:00 [INF] Request starting HTTP/2 GET https://localhost:44328/swagger/v1/swagger.json - -
+2021-11-21 12:52:07.634 -05:00 [INF] Request finished HTTP/2 GET https://localhost:44328/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 192.6063ms
+2021-11-21 19:42:05.683 -05:00 [INF] User profile is available. Using 'C:\Users\Davis Ayus\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2021-11-21 19:42:06.364 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-11-21 19:42:06.368 -05:00 [INF] Hosting environment: Development
+2021-11-21 19:42:06.369 -05:00 [INF] Content root path: C:\Davis\Personal\Willow\Challenge\Properties\Property.WebAPI
+2021-11-21 19:42:06.419 -05:00 [INF] Request starting HTTP/2 GET https://localhost:44328/swagger/index.html - -
+2021-11-21 19:42:06.619 -05:00 [INF] Request finished HTTP/2 GET https://localhost:44328/swagger/index.html - - - 200 - text/html;charset=utf-8 201.6753ms
+2021-11-21 19:42:06.884 -05:00 [INF] Request starting HTTP/1.1 GET https://localhost:44328/swagger/swagger-ui-bundle.js.map - -
+2021-11-21 19:42:06.952 -05:00 [INF] Request finished HTTP/1.1 GET https://localhost:44328/swagger/swagger-ui-bundle.js.map - - - 404 - - 67.5311ms
+2021-11-21 19:42:07.083 -05:00 [INF] Request starting HTTP/1.1 GET https://localhost:44328/swagger/swagger-ui-standalone-preset.js.map - -
+2021-11-21 19:42:07.086 -05:00 [INF] Request finished HTTP/1.1 GET https://localhost:44328/swagger/swagger-ui-standalone-preset.js.map - - - 404 - - 2.3352ms
+2021-11-21 19:42:07.128 -05:00 [INF] Request starting HTTP/2 GET https://localhost:44328/swagger/v1/swagger.json - -
+2021-11-21 19:42:07.278 -05:00 [INF] Request finished HTTP/2 GET https://localhost:44328/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 150.6288ms
+2021-11-21 19:42:22.925 -05:00 [INF] Request starting HTTP/2 GET https://localhost:44328/swagger/index.html - -
+2021-11-21 19:42:22.932 -05:00 [INF] Request finished HTTP/2 GET https://localhost:44328/swagger/index.html - - - 200 - text/html;charset=utf-8 6.7988ms
+2021-11-21 19:42:23.006 -05:00 [INF] Request starting HTTP/2 GET https://localhost:44328/swagger/swagger-ui.css - -
+2021-11-21 19:42:23.048 -05:00 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2021-11-21 19:42:23.052 -05:00 [INF] Request finished HTTP/2 GET https://localhost:44328/swagger/swagger-ui.css - - - 200 142933 text/css 46.0759ms
+2021-11-21 19:42:23.365 -05:00 [INF] Request starting HTTP/2 GET https://localhost:44328/swagger/v1/swagger.json - -
+2021-11-21 19:42:23.380 -05:00 [INF] Request starting HTTP/2 GET https://localhost:44328/swagger/favicon-32x32.png - -
+2021-11-21 19:42:23.392 -05:00 [INF] Sending file. Request path: '/favicon-32x32.png'. Physical path: 'N/A'
+2021-11-21 19:42:23.397 -05:00 [INF] Request finished HTTP/2 GET https://localhost:44328/swagger/favicon-32x32.png - - - 200 628 image/png 15.7810ms
+2021-11-21 19:42:23.413 -05:00 [INF] Request finished HTTP/2 GET https://localhost:44328/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 48.5632ms
+2021-11-21 19:44:34.794 -05:00 [INF] Request starting HTTP/2 POST https://localhost:44328/api/Property multipart/form-data;+boundary=----WebKitFormBoundaryADCyjATEk8J4sA31 6151
+2021-11-21 19:44:34.799 -05:00 [INF] CORS policy execution failed.
+2021-11-21 19:44:34.800 -05:00 [INF] Request origin https://localhost:44328 does not have permission to access the resource.
+2021-11-21 19:44:34.814 -05:00 [INF] Executing endpoint 'Properties.WebAPI.Controllers.v1.PropertyController.Post (Property.WebAPI)'
+2021-11-21 19:44:34.932 -05:00 [INF] Route matched with {action = "Post", controller = "Property"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Properties.Entities.Entities.Property]] Post(Properties.Entities.Dtos.PropertyCreateDto) on controller Properties.WebAPI.Controllers.v1.PropertyController (Property.WebAPI).
+2021-11-21 19:48:38.851 -05:00 [INF] User profile is available. Using 'C:\Users\Davis Ayus\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2021-11-21 19:48:39.269 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-11-21 19:48:39.269 -05:00 [INF] Hosting environment: Development
+2021-11-21 19:48:39.270 -05:00 [INF] Content root path: C:\Davis\Personal\Willow\Challenge\Properties\Property.WebAPI
+2021-11-21 19:48:39.323 -05:00 [INF] Request starting HTTP/2 GET https://localhost:44328/swagger/index.html - -
+2021-11-21 19:48:39.467 -05:00 [INF] Request finished HTTP/2 GET https://localhost:44328/swagger/index.html - - - 200 - text/html;charset=utf-8 145.0755ms
+2021-11-21 19:48:39.641 -05:00 [INF] Request starting HTTP/1.1 GET https://localhost:44328/swagger/swagger-ui-bundle.js.map - -
+2021-11-21 19:48:39.685 -05:00 [INF] Request finished HTTP/1.1 GET https://localhost:44328/swagger/swagger-ui-bundle.js.map - - - 404 - - 43.8498ms
+2021-11-21 19:48:39.816 -05:00 [INF] Request starting HTTP/1.1 GET https://localhost:44328/swagger/swagger-ui-standalone-preset.js.map - -
+2021-11-21 19:48:39.821 -05:00 [INF] Request finished HTTP/1.1 GET https://localhost:44328/swagger/swagger-ui-standalone-preset.js.map - - - 404 - - 2.7230ms
+2021-11-21 19:48:39.894 -05:00 [INF] Request starting HTTP/2 GET https://localhost:44328/swagger/v1/swagger.json - -
+2021-11-21 19:48:39.994 -05:00 [INF] Request finished HTTP/2 GET https://localhost:44328/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 99.9765ms
+2021-11-21 19:48:57.995 -05:00 [INF] Request starting HTTP/2 POST https://localhost:44328/api/Property multipart/form-data;+boundary=----WebKitFormBoundaryG8L8b93GE7O94yfx 6151
+2021-11-21 19:48:57.999 -05:00 [INF] CORS policy execution failed.
+2021-11-21 19:48:58.000 -05:00 [INF] Request origin https://localhost:44328 does not have permission to access the resource.
+2021-11-21 19:48:58.050 -05:00 [INF] Executing endpoint 'Properties.WebAPI.Controllers.v1.PropertyController.Post (Property.WebAPI)'
+2021-11-21 19:48:58.129 -05:00 [INF] Route matched with {action = "Post", controller = "Property"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Properties.Entities.Entities.Property]] Post(Properties.Entities.Dtos.PropertyCreateDto) on controller Properties.WebAPI.Controllers.v1.PropertyController (Property.WebAPI).
+2021-11-21 19:49:56.175 -05:00 [INF] Executing ObjectResult, writing value of type 'Properties.Entities.Models.ResponseService`1[[Properties.Entities.Entities.Property, Properties.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2021-11-21 19:49:56.242 -05:00 [INF] Executed action Properties.WebAPI.Controllers.v1.PropertyController.Post (Property.WebAPI) in 58106.7488ms
+2021-11-21 19:49:56.245 -05:00 [INF] Executed endpoint 'Properties.WebAPI.Controllers.v1.PropertyController.Post (Property.WebAPI)'
+2021-11-21 19:49:56.247 -05:00 [INF] Request finished HTTP/2 POST https://localhost:44328/api/Property multipart/form-data;+boundary=----WebKitFormBoundaryG8L8b93GE7O94yfx 6151 - 201 - application/json;+charset=utf-8 58252.2174ms
+2021-11-21 20:22:03.092 -05:00 [INF] User profile is available. Using 'C:\Users\Davis Ayus\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2021-11-21 20:22:03.678 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-11-21 20:22:03.678 -05:00 [INF] Hosting environment: Development
+2021-11-21 20:22:03.678 -05:00 [INF] Content root path: C:\Davis\Personal\Willow\Challenge\Properties\Property.WebAPI
+2021-11-21 20:22:03.737 -05:00 [INF] Request starting HTTP/2 GET https://localhost:44328/swagger/index.html - -
+2021-11-21 20:22:03.914 -05:00 [INF] Request finished HTTP/2 GET https://localhost:44328/swagger/index.html - - - 200 - text/html;charset=utf-8 178.6322ms
+2021-11-21 20:22:04.476 -05:00 [INF] Request starting HTTP/1.1 GET https://localhost:44328/swagger/swagger-ui-bundle.js.map - -
+2021-11-21 20:22:04.535 -05:00 [INF] Request finished HTTP/1.1 GET https://localhost:44328/swagger/swagger-ui-bundle.js.map - - - 404 - - 59.7588ms
+2021-11-21 20:22:04.671 -05:00 [INF] Request starting HTTP/1.1 GET https://localhost:44328/swagger/swagger-ui-standalone-preset.js.map - -
+2021-11-21 20:22:04.673 -05:00 [INF] Request finished HTTP/1.1 GET https://localhost:44328/swagger/swagger-ui-standalone-preset.js.map - - - 404 - - 1.6075ms
+2021-11-21 20:22:04.805 -05:00 [INF] Request starting HTTP/2 GET https://localhost:44328/swagger/v1/swagger.json - -
+2021-11-21 20:22:05.002 -05:00 [INF] Request finished HTTP/2 GET https://localhost:44328/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 197.0192ms
+2021-11-21 20:22:22.869 -05:00 [INF] Request starting HTTP/2 POST https://localhost:44328/api/Property multipart/form-data;+boundary=----WebKitFormBoundaryGr804f1NO1ODq4bA 6152
+2021-11-21 20:22:22.874 -05:00 [INF] CORS policy execution failed.
+2021-11-21 20:22:22.874 -05:00 [INF] Request origin https://localhost:44328 does not have permission to access the resource.
+2021-11-21 20:22:22.887 -05:00 [INF] Executing endpoint 'Properties.WebAPI.Controllers.v1.PropertyController.Post (Property.WebAPI)'
+2021-11-21 20:22:23.003 -05:00 [INF] Route matched with {action = "Post", controller = "Property"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Properties.Entities.Entities.Property]] Post(Properties.Entities.Dtos.PropertyCreateDto) on controller Properties.WebAPI.Controllers.v1.PropertyController (Property.WebAPI).
+2021-11-21 20:22:23.266 -05:00 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2021-11-21 20:22:23.306 -05:00 [INF] Executed action Properties.WebAPI.Controllers.v1.PropertyController.Post (Property.WebAPI) in 296.2611ms
+2021-11-21 20:22:23.310 -05:00 [INF] Executed endpoint 'Properties.WebAPI.Controllers.v1.PropertyController.Post (Property.WebAPI)'
+2021-11-21 20:22:23.311 -05:00 [INF] Request finished HTTP/2 POST https://localhost:44328/api/Property multipart/form-data;+boundary=----WebKitFormBoundaryGr804f1NO1ODq4bA 6152 - 400 - application/problem+json;+charset=utf-8 441.5272ms
+2021-11-21 20:23:23.866 -05:00 [INF] Request starting HTTP/2 POST https://localhost:44328/api/Property multipart/form-data;+boundary=----WebKitFormBoundaryBMjzqqq6Azd7I9GS 6139
+2021-11-21 20:23:23.894 -05:00 [INF] CORS policy execution failed.
+2021-11-21 20:23:23.894 -05:00 [INF] Request origin https://localhost:44328 does not have permission to access the resource.
+2021-11-21 20:23:23.897 -05:00 [INF] Executing endpoint 'Properties.WebAPI.Controllers.v1.PropertyController.Post (Property.WebAPI)'
+2021-11-21 20:23:23.898 -05:00 [INF] Route matched with {action = "Post", controller = "Property"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Properties.Entities.Entities.Property]] Post(Properties.Entities.Dtos.PropertyCreateDto) on controller Properties.WebAPI.Controllers.v1.PropertyController (Property.WebAPI).
+2021-11-21 20:23:23.919 -05:00 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2021-11-21 20:23:23.920 -05:00 [INF] Executed action Properties.WebAPI.Controllers.v1.PropertyController.Post (Property.WebAPI) in 22.1455ms
+2021-11-21 20:23:23.921 -05:00 [INF] Executed endpoint 'Properties.WebAPI.Controllers.v1.PropertyController.Post (Property.WebAPI)'
+2021-11-21 20:23:23.930 -05:00 [INF] Request finished HTTP/2 POST https://localhost:44328/api/Property multipart/form-data;+boundary=----WebKitFormBoundaryBMjzqqq6Azd7I9GS 6139 - 400 - application/problem+json;+charset=utf-8 63.3395ms
+2021-11-21 21:28:20.763 -05:00 [INF] User profile is available. Using 'C:\Users\Davis Ayus\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2021-11-21 21:28:21.654 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-11-21 21:28:21.655 -05:00 [INF] Hosting environment: Development
+2021-11-21 21:28:21.655 -05:00 [INF] Content root path: C:\Davis\Personal\Willow\Challenge\Properties\Properties.WebAPI
+2021-11-21 21:28:21.725 -05:00 [INF] Request starting HTTP/2 GET https://localhost:44328/swagger/index.html - -
+2021-11-21 21:28:21.894 -05:00 [INF] Request finished HTTP/2 GET https://localhost:44328/swagger/index.html - - - 200 - text/html;charset=utf-8 173.8464ms
+2021-11-21 21:28:22.121 -05:00 [INF] Request starting HTTP/1.1 GET https://localhost:44328/swagger/swagger-ui-bundle.js.map - -
+2021-11-21 21:28:22.185 -05:00 [INF] Request finished HTTP/1.1 GET https://localhost:44328/swagger/swagger-ui-bundle.js.map - - - 404 - - 64.2706ms
+2021-11-21 21:28:22.284 -05:00 [INF] Request starting HTTP/1.1 GET https://localhost:44328/swagger/swagger-ui-standalone-preset.js.map - -
+2021-11-21 21:28:22.286 -05:00 [INF] Request finished HTTP/1.1 GET https://localhost:44328/swagger/swagger-ui-standalone-preset.js.map - - - 404 - - 2.3961ms
+2021-11-21 21:28:22.364 -05:00 [INF] Request starting HTTP/2 GET https://localhost:44328/swagger/v1/swagger.json - -
+2021-11-21 21:28:22.536 -05:00 [INF] Request finished HTTP/2 GET https://localhost:44328/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 170.9007ms
+2021-11-21 21:33:29.027 -05:00 [INF] Request starting HTTP/2 GET https://localhost:44328/swagger/index.html - -
+2021-11-21 21:33:29.077 -05:00 [INF] Request finished HTTP/2 GET https://localhost:44328/swagger/index.html - - - 200 - text/html;charset=utf-8 50.5687ms
+2021-11-21 21:33:29.465 -05:00 [INF] Request starting HTTP/2 GET https://localhost:44328/swagger/v1/swagger.json - -
+2021-11-21 21:33:29.555 -05:00 [INF] Request finished HTTP/2 GET https://localhost:44328/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 92.5727ms
+2021-11-21 21:33:40.156 -05:00 [INF] Request starting HTTP/2 GET https://localhost:44328/api/PropertyImage - -
+2021-11-21 21:33:40.171 -05:00 [INF] Executing endpoint 'Properties.WebAPI.Controllers.v1.PropertyImageController.Get (Properties.WebAPI)'
+2021-11-21 21:33:40.263 -05:00 [INF] Route matched with {action = "Get", controller = "PropertyImage"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[Properties.Entities.Dtos.PropertyImageDto]]] Get() on controller Properties.WebAPI.Controllers.v1.PropertyImageController (Properties.WebAPI).
+2021-11-21 21:33:40.296 -05:00 [INF] Executed action Properties.WebAPI.Controllers.v1.PropertyImageController.Get (Properties.WebAPI) in 23.1304ms
+2021-11-21 21:33:40.301 -05:00 [INF] Executed endpoint 'Properties.WebAPI.Controllers.v1.PropertyImageController.Get (Properties.WebAPI)'
+2021-11-21 21:33:40.305 -05:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: Unable to resolve service for type 'Properties.Contracts.Repository.IPropertyImagesRepository' while attempting to activate 'Properties.WebAPI.Controllers.v1.PropertyImageController'.
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.GetService(IServiceProvider sp, Type type, Type requiredBy, Boolean isDefaultParameterRequired)
+   at lambda_method11(Closure , IServiceProvider , Object[] )
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerActivatorProvider.<>c__DisplayClass4_0.<CreateActivator>b__0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass5_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2021-11-21 21:33:40.461 -05:00 [INF] Request finished HTTP/2 GET https://localhost:44328/api/PropertyImage - - - 500 - text/plain 305.0317ms
+2021-11-21 21:35:30.970 -05:00 [INF] User profile is available. Using 'C:\Users\Davis Ayus\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2021-11-21 21:35:31.312 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-11-21 21:35:31.312 -05:00 [INF] Hosting environment: Development
+2021-11-21 21:35:31.313 -05:00 [INF] Content root path: C:\Davis\Personal\Willow\Challenge\Properties\Properties.WebAPI
+2021-11-21 21:35:31.337 -05:00 [INF] Request starting HTTP/2 GET https://localhost:44328/swagger/index.html - -
+2021-11-21 21:35:31.491 -05:00 [INF] Request finished HTTP/2 GET https://localhost:44328/swagger/index.html - - - 200 - text/html;charset=utf-8 154.5463ms
+2021-11-21 21:35:31.669 -05:00 [INF] Request starting HTTP/1.1 GET https://localhost:44328/swagger/swagger-ui-bundle.js.map - -
+2021-11-21 21:35:31.705 -05:00 [INF] Request finished HTTP/1.1 GET https://localhost:44328/swagger/swagger-ui-bundle.js.map - - - 404 - - 36.1001ms
+2021-11-21 21:35:31.809 -05:00 [INF] Request starting HTTP/1.1 GET https://localhost:44328/swagger/swagger-ui-standalone-preset.js.map - -
+2021-11-21 21:35:31.814 -05:00 [INF] Request finished HTTP/1.1 GET https://localhost:44328/swagger/swagger-ui-standalone-preset.js.map - - - 404 - - 6.1493ms
+2021-11-21 21:35:31.876 -05:00 [INF] Request starting HTTP/2 GET https://localhost:44328/swagger/v1/swagger.json - -
+2021-11-21 21:35:32.052 -05:00 [INF] Request finished HTTP/2 GET https://localhost:44328/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 175.6486ms
+2021-11-21 21:36:13.662 -05:00 [INF] Request starting HTTP/2 GET https://localhost:44328/api/PropertyImage - -
+2021-11-21 21:36:13.706 -05:00 [INF] Executing endpoint 'Properties.WebAPI.Controllers.v1.PropertyImageController.Get (Properties.WebAPI)'
+2021-11-21 21:36:13.749 -05:00 [INF] Route matched with {action = "Get", controller = "PropertyImage"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[Properties.Entities.Dtos.PropertyImageDto]]] Get() on controller Properties.WebAPI.Controllers.v1.PropertyImageController (Properties.WebAPI).
+2021-11-21 21:36:13.756 -05:00 [INF] Executed action Properties.WebAPI.Controllers.v1.PropertyImageController.Get (Properties.WebAPI) in 2.9227ms
+2021-11-21 21:36:13.758 -05:00 [INF] Executed endpoint 'Properties.WebAPI.Controllers.v1.PropertyImageController.Get (Properties.WebAPI)'
+2021-11-21 21:36:13.762 -05:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: Unable to resolve service for type 'Properties.Contracts.Repository.IPropertyImagesRepository' while attempting to activate 'Properties.WebAPI.Controllers.v1.PropertyImageController'.
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.GetService(IServiceProvider sp, Type type, Type requiredBy, Boolean isDefaultParameterRequired)
+   at lambda_method11(Closure , IServiceProvider , Object[] )
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerActivatorProvider.<>c__DisplayClass4_0.<CreateActivator>b__0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass5_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2021-11-21 21:36:13.845 -05:00 [INF] Request finished HTTP/2 GET https://localhost:44328/api/PropertyImage - - - 500 - text/plain 183.4445ms
+2021-11-21 21:36:18.017 -05:00 [INF] Request starting HTTP/2 GET https://localhost:44328/swagger/index.html - -
+2021-11-21 21:36:18.020 -05:00 [INF] Request finished HTTP/2 GET https://localhost:44328/swagger/index.html - - - 200 - text/html;charset=utf-8 2.9964ms
+2021-11-21 21:36:18.386 -05:00 [INF] Request starting HTTP/2 GET https://localhost:44328/swagger/v1/swagger.json - -
+2021-11-21 21:36:18.444 -05:00 [INF] Request finished HTTP/2 GET https://localhost:44328/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 57.9381ms
+2021-11-21 21:36:25.816 -05:00 [INF] Request starting HTTP/2 GET https://localhost:44328/api/PropertyImage - -
+2021-11-21 21:36:25.819 -05:00 [INF] Executing endpoint 'Properties.WebAPI.Controllers.v1.PropertyImageController.Get (Properties.WebAPI)'
+2021-11-21 21:36:25.820 -05:00 [INF] Route matched with {action = "Get", controller = "PropertyImage"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[Properties.Entities.Dtos.PropertyImageDto]]] Get() on controller Properties.WebAPI.Controllers.v1.PropertyImageController (Properties.WebAPI).
+2021-11-21 21:36:25.823 -05:00 [INF] Executed action Properties.WebAPI.Controllers.v1.PropertyImageController.Get (Properties.WebAPI) in 2.2712ms
+2021-11-21 21:36:25.823 -05:00 [INF] Executed endpoint 'Properties.WebAPI.Controllers.v1.PropertyImageController.Get (Properties.WebAPI)'
+2021-11-21 21:36:25.825 -05:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: Unable to resolve service for type 'Properties.Contracts.Repository.IPropertyImagesRepository' while attempting to activate 'Properties.WebAPI.Controllers.v1.PropertyImageController'.
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.GetService(IServiceProvider sp, Type type, Type requiredBy, Boolean isDefaultParameterRequired)
+   at lambda_method11(Closure , IServiceProvider , Object[] )
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerActivatorProvider.<>c__DisplayClass4_0.<CreateActivator>b__0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass5_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2021-11-21 21:36:25.829 -05:00 [INF] Request finished HTTP/2 GET https://localhost:44328/api/PropertyImage - - - 500 - text/plain 13.5135ms
+2021-11-21 21:36:47.762 -05:00 [INF] Request starting HTTP/2 GET https://localhost:44328/api/PropertyImage - -
+2021-11-21 21:36:47.763 -05:00 [INF] Executing endpoint 'Properties.WebAPI.Controllers.v1.PropertyImageController.Get (Properties.WebAPI)'
+2021-11-21 21:36:47.770 -05:00 [INF] Route matched with {action = "Get", controller = "PropertyImage"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[Properties.Entities.Dtos.PropertyImageDto]]] Get() on controller Properties.WebAPI.Controllers.v1.PropertyImageController (Properties.WebAPI).
+2021-11-21 21:36:47.772 -05:00 [INF] Executed action Properties.WebAPI.Controllers.v1.PropertyImageController.Get (Properties.WebAPI) in 1.9438ms
+2021-11-21 21:36:47.773 -05:00 [INF] Executed endpoint 'Properties.WebAPI.Controllers.v1.PropertyImageController.Get (Properties.WebAPI)'
+2021-11-21 21:36:47.774 -05:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: Unable to resolve service for type 'Properties.Contracts.Repository.IPropertyImagesRepository' while attempting to activate 'Properties.WebAPI.Controllers.v1.PropertyImageController'.
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.GetService(IServiceProvider sp, Type type, Type requiredBy, Boolean isDefaultParameterRequired)
+   at lambda_method11(Closure , IServiceProvider , Object[] )
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerActivatorProvider.<>c__DisplayClass4_0.<CreateActivator>b__0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass5_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2021-11-21 21:36:47.786 -05:00 [INF] Request finished HTTP/2 GET https://localhost:44328/api/PropertyImage - - - 500 - text/plain 23.5162ms
+2021-11-21 21:36:49.081 -05:00 [INF] Request starting HTTP/2 GET https://localhost:44328/api/PropertyImage - -
+2021-11-21 21:36:49.081 -05:00 [INF] Executing endpoint 'Properties.WebAPI.Controllers.v1.PropertyImageController.Get (Properties.WebAPI)'
+2021-11-21 21:36:49.081 -05:00 [INF] Route matched with {action = "Get", controller = "PropertyImage"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[Properties.Entities.Dtos.PropertyImageDto]]] Get() on controller Properties.WebAPI.Controllers.v1.PropertyImageController (Properties.WebAPI).
+2021-11-21 21:36:49.083 -05:00 [INF] Executed action Properties.WebAPI.Controllers.v1.PropertyImageController.Get (Properties.WebAPI) in 1.6478ms
+2021-11-21 21:36:49.083 -05:00 [INF] Executed endpoint 'Properties.WebAPI.Controllers.v1.PropertyImageController.Get (Properties.WebAPI)'
+2021-11-21 21:36:49.085 -05:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: Unable to resolve service for type 'Properties.Contracts.Repository.IPropertyImagesRepository' while attempting to activate 'Properties.WebAPI.Controllers.v1.PropertyImageController'.
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.GetService(IServiceProvider sp, Type type, Type requiredBy, Boolean isDefaultParameterRequired)
+   at lambda_method11(Closure , IServiceProvider , Object[] )
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerActivatorProvider.<>c__DisplayClass4_0.<CreateActivator>b__0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass5_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2021-11-21 21:36:49.087 -05:00 [INF] Request finished HTTP/2 GET https://localhost:44328/api/PropertyImage - - - 500 - text/plain 6.7761ms
+2021-11-21 21:43:36.411 -05:00 [INF] User profile is available. Using 'C:\Users\Davis Ayus\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2021-11-21 21:43:36.784 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-11-21 21:43:36.784 -05:00 [INF] Hosting environment: Development
+2021-11-21 21:43:36.784 -05:00 [INF] Content root path: C:\Davis\Personal\Willow\Challenge\Properties\Properties.WebAPI
+2021-11-21 21:43:36.853 -05:00 [INF] Request starting HTTP/2 GET https://localhost:44328/swagger/index.html - -
+2021-11-21 21:43:37.021 -05:00 [INF] Request finished HTTP/2 GET https://localhost:44328/swagger/index.html - - - 200 - text/html;charset=utf-8 167.9498ms
+2021-11-21 21:43:37.235 -05:00 [INF] Request starting HTTP/1.1 GET https://localhost:44328/swagger/swagger-ui-bundle.js.map - -
+2021-11-21 21:43:37.311 -05:00 [INF] Request finished HTTP/1.1 GET https://localhost:44328/swagger/swagger-ui-bundle.js.map - - - 404 - - 58.9520ms
+2021-11-21 21:43:37.400 -05:00 [INF] Request starting HTTP/1.1 GET https://localhost:44328/swagger/swagger-ui-standalone-preset.js.map - -
+2021-11-21 21:43:37.406 -05:00 [INF] Request finished HTTP/1.1 GET https://localhost:44328/swagger/swagger-ui-standalone-preset.js.map - - - 404 - - 4.7307ms
+2021-11-21 21:43:37.460 -05:00 [INF] Request starting HTTP/2 GET https://localhost:44328/swagger/v1/swagger.json - -
+2021-11-21 21:43:37.581 -05:00 [INF] Request finished HTTP/2 GET https://localhost:44328/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 120.7422ms
+2021-11-21 21:44:12.365 -05:00 [INF] Request starting HTTP/2 GET https://localhost:44328/api/PropertyImage - -
+2021-11-21 21:44:12.437 -05:00 [INF] Executing endpoint 'Properties.WebAPI.Controllers.v1.PropertyImageController.Get (Properties.WebAPI)'
+2021-11-21 21:44:12.514 -05:00 [INF] Route matched with {action = "Get", controller = "PropertyImage"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[Properties.Entities.Dtos.PropertyImageDto]]] Get() on controller Properties.WebAPI.Controllers.v1.PropertyImageController (Properties.WebAPI).
+2021-11-21 21:44:48.256 -05:00 [INF] Executing ObjectResult, writing value of type 'Properties.Entities.Models.ResponseService`1[[System.Collections.Generic.List`1[[Properties.Entities.Dtos.PropertyImageDto, Properties.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2021-11-21 21:44:48.310 -05:00 [INF] Executed action Properties.WebAPI.Controllers.v1.PropertyImageController.Get (Properties.WebAPI) in 35790.6798ms
+2021-11-21 21:44:48.313 -05:00 [INF] Executed endpoint 'Properties.WebAPI.Controllers.v1.PropertyImageController.Get (Properties.WebAPI)'
+2021-11-21 21:44:48.315 -05:00 [INF] Request finished HTTP/2 GET https://localhost:44328/api/PropertyImage - - - 200 - application/json;+charset=utf-8 35950.7890ms
+2021-11-21 21:45:22.186 -05:00 [INF] Request starting HTTP/2 POST https://localhost:44328/api/PropertyImage multipart/form-data;+boundary=----WebKitFormBoundaryXTG3ovSKQLUuZ7Yf 145877
+2021-11-21 21:45:22.190 -05:00 [INF] CORS policy execution failed.
+2021-11-21 21:45:22.190 -05:00 [INF] Request origin https://localhost:44328 does not have permission to access the resource.
+2021-11-21 21:45:22.193 -05:00 [INF] Executing endpoint 'Properties.WebAPI.Controllers.v1.PropertyImageController.Post (Properties.WebAPI)'
+2021-11-21 21:45:22.209 -05:00 [INF] Route matched with {action = "Post", controller = "PropertyImage"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Properties.Entities.Entities.PropertyImage]] Post(Properties.Entities.Dtos.PropertyImageCreateDto) on controller Properties.WebAPI.Controllers.v1.PropertyImageController (Properties.WebAPI).
+2021-11-21 21:45:23.157 -05:00 [ERR] Service: AddPropertyImageAsync, Message: An error occurred while updating the entries. See the inner exception for details. Cannot insert the value NULL into column 'IdPropertyImage', table 'PropertiesDb.dbo.PropertyImages'; column does not allow nulls. INSERT fails.
+The statement has been terminated.)? 
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while updating the entries. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Cannot insert the value NULL into column 'IdPropertyImage', table 'PropertiesDb.dbo.PropertyImages'; column does not allow nulls. INSERT fails.
+The statement has been terminated.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__169_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.Tasks.Task.<>c.<.cctor>b__277_0(Object obj)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+ClientConnectionId:d312f9c6-e2ae-4734-8811-22a26d41c5c0
+Error Number:515,State:2,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(DbContext _, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Properties.Repository.Repository.PropertyImageRepository.AddAsync(PropertyImage entity) in C:\Davis\Personal\Willow\Challenge\Properties\Properties.Repository\Repository\PropertyImageRepository.cs:line 28
+   at Properties.Core.Core.V1.PropertyImageCore.AddAsync(PropertyImageCreateDto entityCreate) in C:\Davis\Personal\Willow\Challenge\Properties\Properties.Core\Core\V1\PropertyImageCore.cs:line 42
+2021-11-21 21:45:23.344 -05:00 [INF] Executing ObjectResult, writing value of type 'Properties.Entities.Models.ResponseService`1[[Properties.Entities.Entities.PropertyImage, Properties.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2021-11-21 21:45:23.355 -05:00 [INF] Executed action Properties.WebAPI.Controllers.v1.PropertyImageController.Post (Properties.WebAPI) in 1145.231ms
+2021-11-21 21:45:23.355 -05:00 [INF] Executed endpoint 'Properties.WebAPI.Controllers.v1.PropertyImageController.Post (Properties.WebAPI)'
+2021-11-21 21:45:23.356 -05:00 [INF] Request finished HTTP/2 POST https://localhost:44328/api/PropertyImage multipart/form-data;+boundary=----WebKitFormBoundaryXTG3ovSKQLUuZ7Yf 145877 - 500 - application/json;+charset=utf-8 1170.5733ms
+2021-11-21 21:46:10.704 -05:00 [INF] Request starting HTTP/2 POST https://localhost:44328/api/PropertyImage multipart/form-data;+boundary=----WebKitFormBoundaryRS3TkYh0BMgUDUeg 145877
+2021-11-21 21:46:10.705 -05:00 [INF] CORS policy execution failed.
+2021-11-21 21:46:10.705 -05:00 [INF] Request origin https://localhost:44328 does not have permission to access the resource.
+2021-11-21 21:46:10.705 -05:00 [INF] Executing endpoint 'Properties.WebAPI.Controllers.v1.PropertyImageController.Post (Properties.WebAPI)'
+2021-11-21 21:46:10.706 -05:00 [INF] Route matched with {action = "Post", controller = "PropertyImage"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Properties.Entities.Entities.PropertyImage]] Post(Properties.Entities.Dtos.PropertyImageCreateDto) on controller Properties.WebAPI.Controllers.v1.PropertyImageController (Properties.WebAPI).
+2021-11-21 21:46:10.912 -05:00 [INF] Executing ObjectResult, writing value of type 'Properties.Entities.Models.ResponseService`1[[Properties.Entities.Entities.PropertyImage, Properties.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2021-11-21 21:46:10.915 -05:00 [INF] Executed action Properties.WebAPI.Controllers.v1.PropertyImageController.Post (Properties.WebAPI) in 208.748ms
+2021-11-21 21:46:10.915 -05:00 [INF] Executed endpoint 'Properties.WebAPI.Controllers.v1.PropertyImageController.Post (Properties.WebAPI)'
+2021-11-21 21:46:10.917 -05:00 [INF] Request finished HTTP/2 POST https://localhost:44328/api/PropertyImage multipart/form-data;+boundary=----WebKitFormBoundaryRS3TkYh0BMgUDUeg 145877 - 201 - application/json;+charset=utf-8 213.0835ms
+2021-11-21 21:46:22.523 -05:00 [INF] Request starting HTTP/2 GET https://localhost:44328/api/PropertyImage - -
+2021-11-21 21:46:22.524 -05:00 [INF] Executing endpoint 'Properties.WebAPI.Controllers.v1.PropertyImageController.Get (Properties.WebAPI)'
+2021-11-21 21:46:22.524 -05:00 [INF] Route matched with {action = "Get", controller = "PropertyImage"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[Properties.Entities.Dtos.PropertyImageDto]]] Get() on controller Properties.WebAPI.Controllers.v1.PropertyImageController (Properties.WebAPI).
+2021-11-21 21:46:27.909 -05:00 [INF] Executing ObjectResult, writing value of type 'Properties.Entities.Models.ResponseService`1[[System.Collections.Generic.List`1[[Properties.Entities.Dtos.PropertyImageDto, Properties.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2021-11-21 21:46:27.913 -05:00 [INF] Executed action Properties.WebAPI.Controllers.v1.PropertyImageController.Get (Properties.WebAPI) in 5389.141ms
+2021-11-21 21:46:27.914 -05:00 [INF] Executed endpoint 'Properties.WebAPI.Controllers.v1.PropertyImageController.Get (Properties.WebAPI)'
+2021-11-21 21:46:27.914 -05:00 [INF] Request finished HTTP/2 GET https://localhost:44328/api/PropertyImage - - - 200 - application/json;+charset=utf-8 5390.5460ms
+2021-11-21 21:52:37.876 -05:00 [INF] User profile is available. Using 'C:\Users\Davis Ayus\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2021-11-21 21:52:38.498 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-11-21 21:52:38.499 -05:00 [INF] Hosting environment: Development
+2021-11-21 21:52:38.499 -05:00 [INF] Content root path: C:\Davis\Personal\Willow\Challenge\Properties\Properties.WebAPI
+2021-11-21 21:52:38.524 -05:00 [INF] Request starting HTTP/2 GET https://localhost:44328/swagger/index.html - -
+2021-11-21 21:52:38.677 -05:00 [INF] Request finished HTTP/2 GET https://localhost:44328/swagger/index.html - - - 200 - text/html;charset=utf-8 153.8412ms
+2021-11-21 21:52:39.014 -05:00 [INF] Request starting HTTP/1.1 GET https://localhost:44328/swagger/swagger-ui-bundle.js.map - -
+2021-11-21 21:52:39.104 -05:00 [INF] Request finished HTTP/1.1 GET https://localhost:44328/swagger/swagger-ui-bundle.js.map - - - 404 - - 90.6204ms
+2021-11-21 21:52:39.191 -05:00 [INF] Request starting HTTP/1.1 GET https://localhost:44328/swagger/swagger-ui-standalone-preset.js.map - -
+2021-11-21 21:52:39.194 -05:00 [INF] Request finished HTTP/1.1 GET https://localhost:44328/swagger/swagger-ui-standalone-preset.js.map - - - 404 - - 3.0215ms
+2021-11-21 21:52:39.271 -05:00 [INF] Request starting HTTP/2 GET https://localhost:44328/swagger/v1/swagger.json - -
+2021-11-21 21:52:39.394 -05:00 [INF] Request finished HTTP/2 GET https://localhost:44328/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 123.2585ms
+2021-11-21 21:52:49.458 -05:00 [INF] Request starting HTTP/2 GET https://localhost:44328/swagger/index.html - -
+2021-11-21 21:52:49.461 -05:00 [INF] Request finished HTTP/2 GET https://localhost:44328/swagger/index.html - - - 200 - text/html;charset=utf-8 2.5488ms
+2021-11-21 21:52:49.812 -05:00 [INF] Request starting HTTP/2 GET https://localhost:44328/swagger/v1/swagger.json - -
+2021-11-21 21:52:49.837 -05:00 [INF] Request finished HTTP/2 GET https://localhost:44328/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 24.0000ms
+2021-11-21 22:20:17.952 -05:00 [INF] User profile is available. Using 'C:\Users\Davis Ayus\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2021-11-21 22:20:18.355 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-11-21 22:20:18.356 -05:00 [INF] Hosting environment: Development
+2021-11-21 22:20:18.356 -05:00 [INF] Content root path: C:\Davis\Personal\Willow\Challenge\Properties\Properties.WebAPI
+2021-11-21 22:20:18.381 -05:00 [INF] Request starting HTTP/2 GET https://localhost:44328/swagger/index.html - -
+2021-11-21 22:20:18.549 -05:00 [INF] Request finished HTTP/2 GET https://localhost:44328/swagger/index.html - - - 200 - text/html;charset=utf-8 168.0701ms
+2021-11-21 22:20:18.776 -05:00 [INF] Request starting HTTP/1.1 GET https://localhost:44328/swagger/swagger-ui-bundle.js.map - -
+2021-11-21 22:20:18.816 -05:00 [INF] Request finished HTTP/1.1 GET https://localhost:44328/swagger/swagger-ui-bundle.js.map - - - 404 - - 40.0216ms
+2021-11-21 22:20:18.943 -05:00 [INF] Request starting HTTP/1.1 GET https://localhost:44328/swagger/swagger-ui-standalone-preset.js.map - -
+2021-11-21 22:20:18.945 -05:00 [INF] Request finished HTTP/1.1 GET https://localhost:44328/swagger/swagger-ui-standalone-preset.js.map - - - 404 - - 2.5422ms
+2021-11-21 22:20:19.019 -05:00 [INF] Request starting HTTP/2 GET https://localhost:44328/swagger/v1/swagger.json - -
+2021-11-21 22:20:19.182 -05:00 [INF] Request finished HTTP/2 GET https://localhost:44328/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 161.9855ms
+2021-11-21 22:20:38.124 -05:00 [INF] Request starting HTTP/2 GET https://localhost:44328/swagger/index.html - -
+2021-11-21 22:20:38.126 -05:00 [INF] Request finished HTTP/2 GET https://localhost:44328/swagger/index.html - - - 200 - text/html;charset=utf-8 1.8945ms
+2021-11-21 22:20:38.506 -05:00 [INF] Request starting HTTP/2 GET https://localhost:44328/swagger/v1/swagger.json - -
+2021-11-21 22:20:38.552 -05:00 [INF] Request finished HTTP/2 GET https://localhost:44328/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 45.7953ms
+2021-11-21 22:21:21.761 -05:00 [INF] Request starting HTTP/2 PUT https://localhost:44328/api/Property/Price application/json 37
+2021-11-21 22:21:21.767 -05:00 [INF] CORS policy execution failed.
+2021-11-21 22:21:21.767 -05:00 [INF] Request origin https://localhost:44328 does not have permission to access the resource.
+2021-11-21 22:21:21.790 -05:00 [INF] Executing endpoint 'Properties.WebAPI.Controllers.v1.PropertyController.PutPrice (Properties.WebAPI)'
+2021-11-21 22:21:21.833 -05:00 [INF] Route matched with {action = "PutPrice", controller = "Property"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Properties.Entities.Entities.Property]] PutPrice(Properties.Entities.Dtos.PropertyUpdatePriceDto) on controller Properties.WebAPI.Controllers.v1.PropertyController (Properties.WebAPI).
+2021-11-21 22:21:37.883 -05:00 [INF] Executing ObjectResult, writing value of type 'Properties.Entities.Models.ResponseService`1[[Properties.Entities.Entities.Property, Properties.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2021-11-21 22:21:37.953 -05:00 [INF] Executed action Properties.WebAPI.Controllers.v1.PropertyController.PutPrice (Properties.WebAPI) in 16114.3695ms
+2021-11-21 22:21:37.957 -05:00 [INF] Executed endpoint 'Properties.WebAPI.Controllers.v1.PropertyController.PutPrice (Properties.WebAPI)'
+2021-11-21 22:21:37.959 -05:00 [INF] Request finished HTTP/2 PUT https://localhost:44328/api/Property/Price application/json 37 - 201 - application/json;+charset=utf-8 16198.6693ms
+2021-11-21 22:21:55.846 -05:00 [INF] Request starting HTTP/2 GET https://localhost:44328/api/Property - -
+2021-11-21 22:21:55.851 -05:00 [INF] Executing endpoint 'Properties.WebAPI.Controllers.v1.PropertyController.Get (Properties.WebAPI)'
+2021-11-21 22:21:55.858 -05:00 [INF] Route matched with {action = "Get", controller = "Property"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[Properties.Entities.Entities.Property]]] Get() on controller Properties.WebAPI.Controllers.v1.PropertyController (Properties.WebAPI).
+2021-11-21 22:21:56.002 -05:00 [INF] Executing ObjectResult, writing value of type 'Properties.Entities.Models.ResponseService`1[[System.Collections.Generic.List`1[[Properties.Entities.Dtos.PropertyDto, Properties.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2021-11-21 22:21:56.012 -05:00 [INF] Executed action Properties.WebAPI.Controllers.v1.PropertyController.Get (Properties.WebAPI) in 152.9514ms
+2021-11-21 22:21:56.012 -05:00 [INF] Executed endpoint 'Properties.WebAPI.Controllers.v1.PropertyController.Get (Properties.WebAPI)'
+2021-11-21 22:21:56.014 -05:00 [INF] Request finished HTTP/2 GET https://localhost:44328/api/Property - - - 200 - application/json;+charset=utf-8 167.8293ms
+2021-11-26 15:52:04.131 -05:00 [INF] User profile is available. Using 'C:\Users\Davis Ayus\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2021-11-26 15:52:04.734 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-11-26 15:52:04.734 -05:00 [INF] Hosting environment: Development
+2021-11-26 15:52:04.735 -05:00 [INF] Content root path: C:\Davis\Personal\Willow\Challenge\Properties\Properties.WebAPI
+2021-11-26 15:52:04.795 -05:00 [INF] Request starting HTTP/2 GET https://localhost:44328/swagger/index.html - -
+2021-11-26 15:52:04.941 -05:00 [INF] Request finished HTTP/2 GET https://localhost:44328/swagger/index.html - - - 200 - text/html;charset=utf-8 147.6740ms
+2021-11-26 15:52:05.222 -05:00 [INF] Request starting HTTP/1.1 GET https://localhost:44328/swagger/swagger-ui-bundle.js.map - -
+2021-11-26 15:52:05.295 -05:00 [INF] Request finished HTTP/1.1 GET https://localhost:44328/swagger/swagger-ui-bundle.js.map - - - 404 - - 70.9880ms
+2021-11-26 15:52:05.379 -05:00 [INF] Request starting HTTP/1.1 GET https://localhost:44328/swagger/swagger-ui-standalone-preset.js.map - -
+2021-11-26 15:52:05.382 -05:00 [INF] Request finished HTTP/1.1 GET https://localhost:44328/swagger/swagger-ui-standalone-preset.js.map - - - 404 - - 3.2841ms
+2021-11-26 15:52:05.478 -05:00 [INF] Request starting HTTP/2 GET https://localhost:44328/swagger/v1/swagger.json - -
+2021-11-26 15:52:05.635 -05:00 [INF] Request finished HTTP/2 GET https://localhost:44328/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 157.6656ms
+2021-11-26 16:07:05.349 -05:00 [INF] User profile is available. Using 'C:\Users\Davis Ayus\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2021-11-26 16:07:05.947 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-11-26 16:07:05.948 -05:00 [INF] Hosting environment: Development
+2021-11-26 16:07:05.948 -05:00 [INF] Content root path: C:\Davis\Personal\Willow\Challenge\Properties\Properties.WebAPI
+2021-11-26 16:07:05.984 -05:00 [INF] Request starting HTTP/2 GET https://localhost:44328/swagger/index.html - -
+2021-11-26 16:07:06.125 -05:00 [INF] Request finished HTTP/2 GET https://localhost:44328/swagger/index.html - - - 200 - text/html;charset=utf-8 141.7672ms
+2021-11-26 16:07:06.347 -05:00 [INF] Request starting HTTP/1.1 GET https://localhost:44328/swagger/swagger-ui-bundle.js.map - -
+2021-11-26 16:07:06.409 -05:00 [INF] Request finished HTTP/1.1 GET https://localhost:44328/swagger/swagger-ui-bundle.js.map - - - 404 - - 61.5306ms
+2021-11-26 16:07:06.504 -05:00 [INF] Request starting HTTP/1.1 GET https://localhost:44328/swagger/swagger-ui-standalone-preset.js.map - -
+2021-11-26 16:07:06.512 -05:00 [INF] Request finished HTTP/1.1 GET https://localhost:44328/swagger/swagger-ui-standalone-preset.js.map - - - 404 - - 7.3845ms
+2021-11-26 16:07:06.608 -05:00 [INF] Request starting HTTP/2 GET https://localhost:44328/swagger/v1/swagger.json - -
+2021-11-26 16:07:06.810 -05:00 [INF] Request finished HTTP/2 GET https://localhost:44328/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 212.8680ms
+2021-11-26 16:11:50.556 -05:00 [INF] User profile is available. Using 'C:\Users\Davis Ayus\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2021-11-26 16:11:50.933 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-11-26 16:11:50.936 -05:00 [INF] Hosting environment: Development
+2021-11-26 16:11:50.937 -05:00 [INF] Content root path: C:\Davis\Personal\Willow\Challenge\Properties\Properties.WebAPI
+2021-11-26 16:11:50.979 -05:00 [INF] Request starting HTTP/2 GET https://localhost:44328/swagger/index.html - -
+2021-11-26 16:11:51.093 -05:00 [INF] Request finished HTTP/2 GET https://localhost:44328/swagger/index.html - - - 200 - text/html;charset=utf-8 115.3933ms
+2021-11-26 16:11:51.350 -05:00 [INF] Request starting HTTP/1.1 GET https://localhost:44328/swagger/swagger-ui-bundle.js.map - -
+2021-11-26 16:11:51.442 -05:00 [INF] Request finished HTTP/1.1 GET https://localhost:44328/swagger/swagger-ui-bundle.js.map - - - 404 - - 92.1935ms
+2021-11-26 16:11:51.543 -05:00 [INF] Request starting HTTP/1.1 GET https://localhost:44328/swagger/swagger-ui-standalone-preset.js.map - -
+2021-11-26 16:11:51.547 -05:00 [INF] Request finished HTTP/1.1 GET https://localhost:44328/swagger/swagger-ui-standalone-preset.js.map - - - 404 - - 4.6431ms
+2021-11-26 16:11:51.632 -05:00 [INF] Request starting HTTP/2 GET https://localhost:44328/swagger/v1/swagger.json - -
+2021-11-26 16:11:51.824 -05:00 [INF] Request finished HTTP/2 GET https://localhost:44328/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 191.7614ms
+2021-12-14 22:20:12.112 -05:00 [INF] User profile is available. Using 'C:\Users\Davis Ayus\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2021-12-14 22:20:12.875 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-12-14 22:20:12.876 -05:00 [INF] Hosting environment: Development
+2021-12-14 22:20:12.876 -05:00 [INF] Content root path: C:\Davis\Personal\Willow\Challenge\Properties\Properties.WebAPI
+2021-12-14 22:20:12.931 -05:00 [INF] Request starting HTTP/2 GET https://localhost:44328/swagger/index.html - -
+2021-12-14 22:20:13.149 -05:00 [INF] Request finished HTTP/2 GET https://localhost:44328/swagger/index.html - - - 200 - text/html;charset=utf-8 223.4921ms
+2021-12-14 22:20:13.459 -05:00 [INF] Request starting HTTP/1.1 GET https://localhost:44328/swagger/swagger-ui-bundle.js.map - -
+2021-12-14 22:20:13.552 -05:00 [INF] Request finished HTTP/1.1 GET https://localhost:44328/swagger/swagger-ui-bundle.js.map - - - 404 - - 92.9401ms
+2021-12-14 22:20:13.712 -05:00 [INF] Request starting HTTP/1.1 GET https://localhost:44328/swagger/swagger-ui-standalone-preset.js.map - -
+2021-12-14 22:20:13.714 -05:00 [INF] Request finished HTTP/1.1 GET https://localhost:44328/swagger/swagger-ui-standalone-preset.js.map - - - 404 - - 1.4872ms
+2021-12-14 22:20:13.846 -05:00 [INF] Request starting HTTP/2 GET https://localhost:44328/swagger/v1/swagger.json - -
+2021-12-14 22:20:14.064 -05:00 [INF] Request finished HTTP/2 GET https://localhost:44328/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 218.9280ms

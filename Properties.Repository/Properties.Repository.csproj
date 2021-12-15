@@ -1,0 +1,13 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Properties.Contracts\Properties.Contracts.csproj" />
+    <ProjectReference Include="..\Properties.DataAccess\Properties.DataAccess.csproj" />
+    <ProjectReference Include="..\Properties.Entities\Properties.Entities.csproj" />
+  </ItemGroup>
+
+</Project>
